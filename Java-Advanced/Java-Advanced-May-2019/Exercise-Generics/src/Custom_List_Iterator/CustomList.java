@@ -68,6 +68,18 @@ public class CustomList<T extends Comparable<T>> implements Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return this.list.iterator();
+        return new Iterator<T>() {
+            private int index = 0;
+
+            @Override
+            public boolean hasNext() {
+                return this.index < list.size();
+            }
+
+            @Override
+            public T next() {
+                return list.get(this.index++);
+            }
+        };
     }
 }

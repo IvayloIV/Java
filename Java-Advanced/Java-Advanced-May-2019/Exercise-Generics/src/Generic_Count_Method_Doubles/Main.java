@@ -11,14 +11,15 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-        List<Double> elements = new ArrayList<>();
+        List<Box<Double>> boxes = new ArrayList<>();
         int n = Integer.parseInt(bufferedReader.readLine());
         for (int i = 0; i < n; i++) {
-            Double element = Double.parseDouble(bufferedReader.readLine());
-            elements.add(element);
+            double element = Double.parseDouble(bufferedReader.readLine());
+            Box<Double> box = new Box<>(element);
+            boxes.add(box);
         }
 
         Double compareElement = Double.parseDouble(bufferedReader.readLine());
-        System.out.println(Box.compareElements(elements, compareElement));
+        System.out.println(Box.compareElements(boxes, compareElement));
     }
 }

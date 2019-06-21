@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class CustomList<T extends Comparable<T>> {
-    public List<T> list;
+    private List<T> list;
 
     public CustomList() {
         this.list = new ArrayList<>();
@@ -63,6 +63,17 @@ public class CustomList<T extends Comparable<T>> {
         }
 
         return min;
+    }
+
+    public T get(int index) {
+        if (index < 0 || index > this.list.size() - 1) {
+            throw new IndexOutOfBoundsException();
+        }
+        return this.list.get(index);
+    }
+
+    public int getSize() {
+        return this.list.size();
     }
 
     public void forEach(Consumer<T> consumer) {

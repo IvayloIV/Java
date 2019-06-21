@@ -2,7 +2,7 @@ package Generic_Count_Method_Doubles;
 
 import java.util.List;
 
-public class Box<T> {
+public class Box<T extends Comparable<T>> {
     private T element;
 
     public Box(T element) {
@@ -15,16 +15,20 @@ public class Box<T> {
         list.set(index2, temp);
     }
 
-    public static <T extends Comparable<T>> int compareElements(List<T> element, T compareElement) {
+    public static <T extends Comparable<T>> int compareElements(List<Box<T>> element, T compareElement) {
         int count = 0;
 
-        for (T el : element) {
-            if (el.compareTo(compareElement) > 0) {
+        for (Box<T> box : element) {
+            if (box.getElement().compareTo(compareElement) > 0) {
                 count++;
             }
         }
 
         return count;
+    }
+
+    public T getElement() {
+        return this.element;
     }
 
     @Override
