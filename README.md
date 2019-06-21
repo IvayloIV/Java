@@ -12,3 +12,4 @@
 |06. Defining Classes|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Java-Advanced-May-2019/Lab-Defining_Classes)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Java-Advanced-May-2019/Exercise-Defining_Classes)|
 |07. Workshop|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Java-Advanced-May-2019/Lab-Workshop)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Java-Advanced-May-2019/Exercise-Workshop)|
 |08. Generics|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Java-Advanced-May-2019/Lab-Generics)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Java-Advanced-May-2019/Exercise-Generics)|
+|09. Iterators and Comparators|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Java-Advanced-May-2019/Lab-Iterators_and_Comparators)|Exercise|
