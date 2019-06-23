@@ -1,0 +1,4 @@
+UPDATE `employees` AS e
+SET e.salary = e.salary * 1.10;
+
+SELECT e.salary FROM `employees` AS e;

@@ -1,0 +1,18 @@
+CREATE TABLE `people` (
+	id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(200) NOT NULL,
+    picture VARBINARY(2000),
+    height FLOAT,
+    weight FLOAT,
+    gender ENUM('m', 'f') NOT NULL,
+    birthdate DATE NOT NULL,
+    biography VARCHAR(200),
+    PRIMARY KEY(id)
+);
+
+INSERT INTO `people` (name, gender, birthdate)
+VALUES ('Pesho', 'f', '1999-11-03'), 
+('Gosho', 'm', '1999-11-03'), 
+('Pesho', 'f', '1999-11-06'), 
+('Yisho', 'f', '1999-11-03'), 
+('Koshi', 'f', '1999-11-03');

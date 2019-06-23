@@ -1,0 +1,4 @@
+UPDATE `payments` AS p
+SET p.tax_rate = p.tax_rate * 0.97;
+
+SELECT p.tax_rate FROM `payments` AS p;

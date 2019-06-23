@@ -1,0 +1,45 @@
+CREATE TABLE `directors` (
+	id INT NOT NULL AUTO_INCREMENT,
+    director_name VARCHAR(45) NOT NULL,
+    notes VARCHAR(200) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO `directors` (director_name, notes)
+VALUES ('Gosho', 'bal bla'), ('Gosho1', 'bal bla'), ('Gosho2', 'bal bla'), ('Gosho3', 'bal bla'), ('Gosho4', 'bal bla');
+
+CREATE TABLE `genres` (
+	id INT NOT NULL AUTO_INCREMENT,
+    genre_name VARCHAR(30) NOT NULL,
+    notes VARCHAR(200) NOT NULL,
+    PRIMARY KEY(id)
+);
+
+INSERT INTO `genres` (genre_name, notes)
+VALUES ('Male1', 'bla'), ('Male2', 'bla'), ('Male3', 'bla4'), ('Male5', 'bla'), ('Male6', 'bla');
+
+CREATE TABLE `categories` (
+	id INT NOT NULL AUTO_INCREMENT,
+    category_name VARCHAR(30) NOT NULL,
+    notes VARCHAR(200) NOT NULL,
+    PRIMARY KEY(id)
+);
+
+INSERT INTO `categories` (category_name, notes)
+VALUES ('Frog', 'bla'), ('Cat', 'bla'), ('Dog', 'bla4'), ('Animal', 'bla'), ('Test', 'bla');
+
+CREATE TABLE `movies` (
+	id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(200) NOT NULL,
+    director_id INT NOT NULL,
+    copyright_year DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    length INT,
+    genre_id INT NOT NULL,
+    category_id INT NOT NULL,
+  	rating FLOAT,
+	notes VARCHAR(200) NOT NULL,
+    PRIMARY KEY(id)
+);
+
+INSERT INTO `movies`(title, director_id, genre_id, category_id, notes)
+VALUES ('Title1', 1, 1, 1, 'asd'), ('Title1', 2, 2, 2, 'fds'), ('Title1', 3, 3, 3, 'gfd'), ('Title1', 4, 4, 4, 'wer'), ('Title1', 5, 5, 5, 'wqe');

@@ -1,0 +1,99 @@
+CREATE TABLE `employees` (
+	id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(45) NOT NULL,
+    last_name VARCHAR(45) NOT NULL,
+    title VARCHAR(45) NOT NULL,
+    notes VARCHAR(45),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO `employees` (first_name, last_name, title)
+VALUES ('Pesho', 'Peshov', 'Hi'), ('Pesho', 'Peshov', 'Hi'), ('Pesho', 'Peshov', 'Hi');
+
+CREATE TABLE `customers` (
+	account_number INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(45) NOT NULL,
+    last_name VARCHAR(45) NOT NULL,
+    phone_number VARCHAR(45) NOT NULL,
+    emergency_name VARCHAR(45),
+    emergency_number VARCHAR(45),
+    notes VARCHAR(45),
+    PRIMARY KEY (account_number)
+);
+
+INSERT INTO `customers` (first_name, last_name, phone_number)
+VALUES ('Pesho', 'Peshov', '0223113232'), ('Pesho', 'Peshov', '0223113232'), ('Pesho', 'Peshov', '0223113232');
+
+CREATE TABLE `room_status` (
+	room_status INT NOT NULL AUTO_INCREMENT,
+	notes VARCHAR(45),
+    PRIMARY KEY (room_status)
+);
+
+INSERT INTO `room_status` (notes)
+VALUES ('empty'), ('fill'), ('fill');
+
+CREATE TABLE `room_types` (
+	room_type INT NOT NULL AUTO_INCREMENT,
+	notes VARCHAR(45),
+    PRIMARY KEY (room_type)
+);
+
+INSERT INTO `room_types` (notes)
+VALUES ('empty'), ('fill'), ('fill');
+
+CREATE TABLE `bed_types` (
+	bed_type INT NOT NULL AUTO_INCREMENT,
+	notes VARCHAR(45),
+    PRIMARY KEY (bed_type)
+);
+
+INSERT INTO `bed_types` (notes)
+VALUES ('empty'), ('fill'), ('fill');
+
+CREATE TABLE `rooms` (
+	room_number INT NOT NULL AUTO_INCREMENT,
+    room_type VARCHAR(45) NOT NULL,
+    bed_type VARCHAR(45) NOT NULL,
+    rate FLOAT NOT NULL,
+	room_status VARCHAR(45) NOT NULL,
+	notes VARCHAR(45),
+    PRIMARY KEY (room_number)
+);
+
+INSERT INTO `rooms` (room_type, bed_type, rate, room_status)
+VALUES ('empty', 'cool', 23.4, 'fill'), ('empty', 'cool', 23.4, 'fill'), ('empty', 'cool', 23.4, 'fill');
+
+CREATE TABLE `payments` (
+	id INT NOT NULL AUTO_INCREMENT,
+    employee_id INT NOT NULL,
+    payment_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    account_number INT NOT NULL,
+    first_date_occupied DATETIME DEFAULT CURRENT_TIMESTAMP,
+    last_date_occupied DATETIME,
+    total_days INT NOT NULL,
+    amount_charged INT,
+    tax_rate FLOAT,
+    tax_amount FLOAT,
+    payment_total FLOAT NOT NULL,
+	notes VARCHAR(45),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO `payments` (employee_id, account_number, total_days, payment_total)
+VALUES (2, 34, 34, 23.3), (2, 34, 34, 23.3), (2, 34, 34, 23.3);
+
+CREATE TABLE `occupancies` (
+	id INT NOT NULL AUTO_INCREMENT,
+    employee_id INT NOT NULL,
+    date_occupied DATETIME DEFAULT CURRENT_TIMESTAMP,
+    account_number INT NOT NULL,
+    room_number INT,
+    rate_applied FLOAT,
+    phone_charge INT,
+	notes VARCHAR(45),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO `occupancies` (employee_id, account_number, rate_applied)
+VALUES (2, 23, 23.3), (2, 23, 23.3), (2, 23, 23.3);

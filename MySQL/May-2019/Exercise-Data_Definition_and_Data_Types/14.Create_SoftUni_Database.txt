@@ -1,0 +1,34 @@
+CREATE TABLE `towns` (
+	id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(45) NOT NUll,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE `addresses` (
+	id INT NOT NULL AUTO_INCREMENT,
+    address_text VARCHAR(200),
+    town_id INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (town_id) REFERENCES `towns`(id)
+);
+
+CREATE TABLE `departments` (
+	id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE `employees` (
+	id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(45) NOT NULL,
+    middle_name VARCHAR(45) NOT NULL,
+    last_name VARCHAR(45) NOT NULL,
+    job_title VARCHAR(45),
+    department_id INT NOT NULL,
+    hire_date DATE,
+    salary FLOAT NOT NULL,
+    address_id INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (department_id) REFERENCES `departments`(id),
+    FOREIGN KEY (address_id) REFERENCES `addresses`(id)
+);
