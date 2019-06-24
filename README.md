@@ -20,3 +20,4 @@
 |Theme|Lab|Exercise|
 |--|:--:|:--:|
 |01. Data Definition And Data Types|[Lab](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Lab-Data_Definition_And_Data_Types)|[Exercise](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Exercise-Data_Definition_and_Data_Types)|
+|02. Basic CRUD|[Lab](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Lab-Basic_CRUD)|Exercise|
