@@ -14,6 +14,9 @@
 |08. Generics|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Java-Advanced-May-2019/Lab-Generics)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Java-Advanced-May-2019/Exercise-Generics)|
 |09. Iterators and Comparators|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Java-Advanced-May-2019/Lab-Iterators_and_Comparators)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Java-Advanced-May-2019/Exercise-Iterators_and_Comparators)|
 
+|Exam Date||
+|--|:--:|
+|24.02.2019|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Exams/24.02.2019)|
 
 ## MySQL
 
