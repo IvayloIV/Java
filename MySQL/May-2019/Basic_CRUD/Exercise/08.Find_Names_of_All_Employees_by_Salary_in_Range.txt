@@ -1,0 +1,4 @@
+SELECT `e`.`first_name`, `e`.`last_name`, `e`.`job_title` AS 'JobTitle' 
+FROM `employees` AS `e`
+WHERE `salary` BETWEEN 20000 AND 30000
+ORDER BY `e`.`employee_id` ASC;

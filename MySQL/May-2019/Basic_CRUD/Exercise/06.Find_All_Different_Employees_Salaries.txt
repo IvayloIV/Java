@@ -1,0 +1,2 @@
+SELECT DISTINCT(`salary`) AS 'Salary' FROM `employees` AS `e`
+ORDER BY `e`.`employee_id` ASC;
