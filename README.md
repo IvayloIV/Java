@@ -27,3 +27,4 @@
 |03. Built in Functions|[Lab](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Built_in_Functions/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Built_in_Functions/Exercise)|
 |04. Data Aggregation|[Lab](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Data_Aggregation/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Data_Aggregation/Exercise)|
 |05. Table Relations|[Lab](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Table_Relations/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Table_Relations/Exercise)|
+|06. Subqueries and Joins|[Lab](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Subqueries_and_Joins/Lab)|Exercise|
