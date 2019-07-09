@@ -28,3 +28,4 @@
 |04. Data Aggregation|[Lab](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Data_Aggregation/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Data_Aggregation/Exercise)|
 |05. Table Relations|[Lab](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Table_Relations/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Table_Relations/Exercise)|
 |06. Subqueries and Joins|[Lab](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Subqueries_and_Joins/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Subqueries_and_Joins/Exercise)|
+|07. Database Programmability|[Lab](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Database_Programmability/Lab)|Exercise|
