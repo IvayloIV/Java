@@ -29,3 +29,7 @@
 |05. Table Relations|[Lab](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Table_Relations/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Table_Relations/Exercise)|
 |06. Subqueries and Joins|[Lab](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Subqueries_and_Joins/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Subqueries_and_Joins/Exercise)|
 |07. Database Programmability|[Lab](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Database_Programmability/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/MySQL/May-2019/Database_Programmability/Exercise)|
+
+|Exam Date||
+|--|:--:|
+|21.10.2018|[Exam](https://github.com/IvayloIV/Java/tree/master/MySQL/Exams/21.10.2018)|
