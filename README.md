@@ -18,6 +18,12 @@
 |--|:--:|
 |24.02.2019|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Exams/24.02.2019)|
 
+## Java - Advanced
+
+|Theme|Lab|Exercise|
+|--|:--:|:--:|
+|01. Working with Abstraction|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Working_with_Abstraction/Lab)|Exercise|
+
 ## MySQL
 
 |Theme|Lab|Exercise|
