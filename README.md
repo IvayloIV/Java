@@ -18,7 +18,7 @@
 |--|:--:|
 |24.02.2019|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Exams/24.02.2019)|
 
-## Java - Advanced
+## Java - OOP
 
 |Theme|Lab|Exercise|
 |--|:--:|:--:|
