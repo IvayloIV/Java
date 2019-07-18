@@ -22,7 +22,7 @@
 
 |Theme|Lab|Exercise|
 |--|:--:|:--:|
-|01. Working with Abstraction|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Working_with_Abstraction/Lab)|Exercise|
+|01. Working with Abstraction|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Working_with_Abstraction/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Working_with_Abstraction/Exercise)|
 
 ## MySQL
 
