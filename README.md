@@ -40,3 +40,4 @@
 |Exam Date||
 |--|:--:|
 |21.10.2018|[Exam](https://github.com/IvayloIV/Java/tree/master/MySQL/Exams/21.10.2018)|
+|25.02.2018|[Exam](https://github.com/IvayloIV/Java/tree/master/MySQL/Exams/25.02.2018)|
