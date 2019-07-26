@@ -25,7 +25,7 @@
 |01. Working with Abstraction|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Working_with_Abstraction/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Working_with_Abstraction/Exercise)|
 |02. Inheritance|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Inheritance/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Inheritance/Exercise)|
 |03. Encapsulation|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Encapsulation/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Encapsulation/Exercise)|
-|04. Interfaces and Abstraction|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Interfaces_and_Abstraction/Lab)|Exercise|
+|04. Interfaces and Abstraction|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Interfaces_and_Abstraction/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Interfaces_and_Abstraction/Exercise)|
 
 ## MySQL
 
