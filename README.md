@@ -27,6 +27,7 @@
 |03. Encapsulation|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Encapsulation/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Encapsulation/Exercise)|
 |04. Interfaces and Abstraction|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Interfaces_and_Abstraction/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Interfaces_and_Abstraction/Exercise)|
 |05. Polymorphism|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Polymorphism/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Polymorphism/Exercise)|
+|06. SOLID|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/SOLID/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/SOLID/Exercise)|
 
 ## MySQL
 
