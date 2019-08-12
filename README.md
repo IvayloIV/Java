@@ -30,6 +30,7 @@
 |06. SOLID|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/SOLID/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/SOLID/Exercise)|
 |07. Reflection|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Reflection/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Reflection/Exercise)|
 |08. Exceptions and Error Handling|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Exceptions_and_Error_Handling/Lab)|Exercise|
+|09. Unit Testing|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Unit_Testing/Lab)|Exercise|
 
 ## MySQL
 
