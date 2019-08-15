@@ -33,6 +33,10 @@
 |09. Unit Testing|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Unit_Testing/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Unit_Testing/Exercise)|
 |10. Test Driven Development|[Lab](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Test_Driven_Development/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-OOP/June-2019/Test_Driven_Development/Exercise)|
 
+|Exam Date||
+|--|:--:|
+|18.04.2019|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-OOP/Exams/18.04.2019)|
+
 ## MySQL
 
 |Theme|Lab|Exercise|
