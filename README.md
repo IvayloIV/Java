@@ -60,4 +60,4 @@
 
 |Theme|Lab|Exercise|
 |--|:--:|:--:|
-|01. DB Apps Introduction|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/DB_Apps_Introduction/Lab)|Exercise|
+|01. DB Apps Introduction|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/DB_Apps_Introduction/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/DB_Apps_Introduction/Exercise)|
