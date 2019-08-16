@@ -55,3 +55,9 @@
 |21.10.2018|[Exam](https://github.com/IvayloIV/Java/tree/master/MySQL/Exams/21.10.2018)|
 |25.02.2018|[Exam](https://github.com/IvayloIV/Java/tree/master/MySQL/Exams/25.02.2018)|
 |03.09.2017|[Exam](https://github.com/IvayloIV/Java/tree/master/MySQL/Exams/03.09.2017)|
+
+## Hibernate
+
+|Theme|Lab|Exercise|
+|--|:--:|:--:|
+|01. DB Apps Introduction|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/DB_Apps_Introduction/Lab)|Exercise|
