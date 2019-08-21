@@ -62,3 +62,4 @@
 |--|:--:|:--:|
 |01. DB Apps Introduction|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/DB_Apps_Introduction/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/DB_Apps_Introduction/Exercise)|
 |02. ORM Fundamentals|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/ORM_Fundamentals/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/ORM_Fundamentals/Exercise)|
+|03. Introduction to Hibernate|Lab|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Introduction_to_Hibernate/Exercise)|
