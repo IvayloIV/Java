@@ -64,3 +64,4 @@
 |02. ORM Fundamentals|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/ORM_Fundamentals/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/ORM_Fundamentals/Exercise)|
 |03. Introduction to Hibernate|Lab|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Introduction_to_Hibernate/Exercise)|
 |04. Hibernate Code First|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Hibernate_Code_First/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Hibernate_Code_First/Exercise)|
+|05. Spring Data Intro|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Spring_Data_Intro/Lab)|Exercise|
