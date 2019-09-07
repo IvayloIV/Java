@@ -68,3 +68,4 @@
 |06. Spring Data Advanced Quering|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Spring_Data_Advanced_Quering/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Spring_Data_Advanced_Quering/Exercise)|
 |07. Spring Data Auto Mapping Objects|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Spring_Data_Auto_Mapping_Objects/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Spring_Data_Auto_Mapping_Objects/Exercise)|
 |08. JSON Processing|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/JSON_Processing/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/JSON_Processing/Exercise)|
+|09. XML Processing|Lab|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/XML_Processing/Exercise)|
