@@ -6,9 +6,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class JaxbUtilImpl implements JaxbUtil {
     private final String BASE_PATH = "src/main/resources/";
@@ -20,8 +18,9 @@ public class JaxbUtilImpl implements JaxbUtil {
         Marshaller marshaller = jaxbContext.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-        try(FileWriter fileWriter = new FileWriter(OUTPUT_PATH + fileName + ".xml")) {
-            marshaller.marshal(item, fileWriter);
+        try (FileWriter fw = new FileWriter(OUTPUT_PATH + fileName + ".xml");
+             BufferedWriter bw = new BufferedWriter(fw)) {
+            marshaller.marshal(item, bw);
         }
     }
 
@@ -29,8 +28,9 @@ public class JaxbUtilImpl implements JaxbUtil {
         JAXBContext jaxbContext = JAXBContext.newInstance(type);
         Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 
-        try(FileReader fileWriter = new FileReader(INPUT_PATH + fileName + ".xml")) {
-            return (T) unmarshaller.unmarshal(fileWriter);
+        try (FileReader fr = new FileReader(INPUT_PATH + fileName + ".xml");
+             BufferedReader br = new BufferedReader(fr)) {
+            return (T) unmarshaller.unmarshal(br);
         }
     }
 }

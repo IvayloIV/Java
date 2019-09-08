@@ -2,12 +2,12 @@ package com.car.dealer.services;
 
 import com.car.dealer.domain.dtos.bindings.CustomersDto;
 import com.car.dealer.domain.dtos.views.customerSales.CustomersBySales;
-import com.car.dealer.domain.dtos.views.order_customers.CustomersOrder;
+import com.car.dealer.domain.dtos.views.orderCustomers.CustomersOrder;
 import com.car.dealer.domain.entities.Customer;
 import com.car.dealer.domain.entities.Part;
 import com.car.dealer.domain.entities.Sale;
 import com.car.dealer.domain.dtos.views.customerSales.CustomerBySales;
-import com.car.dealer.domain.dtos.views.order_customers.CustomerOrders;
+import com.car.dealer.domain.dtos.views.orderCustomers.CustomerOrders;
 import com.car.dealer.repositories.CustomerRepository;
 import com.car.dealer.services.base.CustomerService;
 import com.car.dealer.utils.base.JaxbUtil;

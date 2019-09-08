@@ -1,9 +1,8 @@
-package com.car.dealer.domain.dtos.views.order_customers;
+package com.car.dealer.domain.dtos.views.orderCustomers;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import java.time.LocalDate;
 import java.util.Date;
 
 @XmlAccessorType(XmlAccessType.FIELD)

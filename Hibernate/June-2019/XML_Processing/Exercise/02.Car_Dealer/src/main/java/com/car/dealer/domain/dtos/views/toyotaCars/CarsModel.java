@@ -1,4 +1,4 @@
-package com.car.dealer.domain.dtos.views.toyota_cars;
+package com.car.dealer.domain.dtos.views.toyotaCars;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

@@ -2,11 +2,11 @@ package com.car.dealer.services;
 
 import com.car.dealer.domain.dtos.bindings.CarsDto;
 import com.car.dealer.domain.dtos.views.carsWithListOfParts.CarsParts;
-import com.car.dealer.domain.dtos.views.toyota_cars.CarsModel;
+import com.car.dealer.domain.dtos.views.toyotaCars.CarsModel;
 import com.car.dealer.domain.entities.Car;
 import com.car.dealer.domain.entities.Part;
 import com.car.dealer.domain.dtos.views.carsWithListOfParts.CarParts;
-import com.car.dealer.domain.dtos.views.toyota_cars.CarModel;
+import com.car.dealer.domain.dtos.views.toyotaCars.CarModel;
 import com.car.dealer.repositories.CarRepository;
 import com.car.dealer.repositories.PartRepository;
 import com.car.dealer.services.base.CarService;
