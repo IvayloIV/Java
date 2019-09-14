@@ -69,3 +69,4 @@
 |07. Spring Data Auto Mapping Objects|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Spring_Data_Auto_Mapping_Objects/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Spring_Data_Auto_Mapping_Objects/Exercise)|
 |08. JSON Processing|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/JSON_Processing/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/JSON_Processing/Exercise)|
 |09. XML Processing|Lab|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/XML_Processing/Exercise)|
+|10. Workshop - MVC Project|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Workshop-MVC_Project/Lab)|Exercise|
