@@ -70,3 +70,7 @@
 |08. JSON Processing|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/JSON_Processing/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/JSON_Processing/Exercise)|
 |09. XML Processing|Lab|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/XML_Processing/Exercise)|
 |10. Workshop - MVC Project|[Lab](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Workshop-MVC_Project/Lab)|[Exercise](https://github.com/IvayloIV/Java/tree/master/Hibernate/June-2019/Workshop-MVC_Project/Exercise)|
+
+|Exam Date||
+|--|:--:|
+|09.12.2018|[Exam](https://github.com/IvayloIV/Java/tree/master/Hibernate/Exams/09.12.2018)|
