@@ -82,3 +82,4 @@
 |Theme|Exercise|
 |--|:--:|
 |01. Spring Boot Introduction|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Spring_Boot_Introduction)|
+|02. Spring Essentials|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Spring_Essentials)|
