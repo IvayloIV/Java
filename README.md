@@ -79,6 +79,12 @@
 |20.12.2018|[Exam](https://github.com/IvayloIV/Java/tree/master/Hibernate/Exams/20.12.2018)|
 |Colonial Council Bank|[Exam](https://github.com/IvayloIV/Java/tree/master/Hibernate/Exams/Colonial_Council_Bank)|
 
+## Java Web Basics
+
+|Theme|Exercise|
+|--|:--:|
+|01. Introduction to Java EE|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/January-2019/Introduction_to_Java_EE)|
+
 ## Spring MVC
 
 |Theme|Exercise|
