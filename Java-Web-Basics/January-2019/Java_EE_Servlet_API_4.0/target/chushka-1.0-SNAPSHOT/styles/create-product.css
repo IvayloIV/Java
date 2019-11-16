@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 2.1rem;
+}
+
+div {
+    background-color: #E9ECEF;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+hr {
+    background-color: #DBDEE1;
+    margin: 0;
+    height: 2px;
+    border: none;
+}
+
+form {
+    padding-left: 41%;
+    text-align: left;
+    margin: 2rem 0;
+}
+
+label {
+    display: block;
+    text-align: left;
+}
+
+span {
+    display: block;
+    margin: 0.4rem 0;
+}
+
+input[type="submit"] {
+    background: #17A2B8;
+    border: none;
+    padding: 0.7rem 1.3rem;
+    cursor: pointer;
+    border-radius: 3px;
+    color: white;
+    margin: 1.2rem 0 0 2.1rem;
+}
+
+input:not([type="submit"]), textarea {
+    padding: 0.4rem;
+    width: 30%;
+}
+
+select {
+    padding: 0.3rem;
+    width: 32.5%;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #569FFB;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
