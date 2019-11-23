@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 85%;
+    background-color: #E9ECEF;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 6px;
+    padding: 2rem 0.5rem;
+}
+
+p {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 1rem auto;
+}
+
+footer {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #71A5FD;
+}

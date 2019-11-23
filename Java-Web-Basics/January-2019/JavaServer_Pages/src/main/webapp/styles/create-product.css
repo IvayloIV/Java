@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 85%;
+    background-color: #E9ECEF;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 6px;
+    padding: 2rem 0.5rem;
+}
+
+.button-blue {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+span {
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+footer {
+    text-align: center;
+}
+
+hr {
+    margin: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #71A5FD;
+}
+
+input {
+    padding: 0.2rem 0.4rem;
+}
