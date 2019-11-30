@@ -1,0 +1,44 @@
+.bg-color-dark {
+	background-color: #483D8B;
+	color: #A9A9A9;
+}
+
+.footer {
+	background-color: #483D8B;
+	color: #A9A9A9;
+}
+
+.nav-item>a:hover, .navbar-brand:hover {
+	color: #FFFFFF;
+}
+
+iframe {
+	overflow:hidden;
+}
+
+.tubes {
+    width: 90%;
+    flex-wrap: wrap;
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tube {
+    width: 30%;
+    text-align: center;
+}
+
+.tube img {
+    width: 100%;
+}
+
+.tube p {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.author {
+    font-style: italic;
+    font-size: 1rem;
+}
