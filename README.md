@@ -86,6 +86,7 @@
 |01. Introduction to Java EE|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/January-2019/Introduction_to_Java_EE)|
 |02. Java EE: Servlet API 4.0|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/January-2019/Java_EE_Servlet_API_4.0)|
 |03. JavaServer Pages|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/January-2019/JavaServer_Pages)|
+|04. Workshop - Servlets, JSP, JPA|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/January-2019/Workshop-Servlets_JSP_JPA)|
 
 ## Spring MVC
 
