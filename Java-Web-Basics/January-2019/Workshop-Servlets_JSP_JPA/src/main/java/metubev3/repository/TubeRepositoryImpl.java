@@ -3,17 +3,16 @@ package metubev3.repository;
 import metubev3.domain.entities.Tube;
 import metubev3.domain.enums.TubeStatus;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.Persistence;
 import java.util.List;
 
 public class TubeRepositoryImpl implements TubeRepository {
     private final EntityManager entityManager;
 
-    public TubeRepositoryImpl() {
-        this.entityManager = Persistence
-                .createEntityManagerFactory("metybev3")
-                .createEntityManager();
+    @Inject
+    public TubeRepositoryImpl(EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
 
     @Override
@@ -21,7 +20,7 @@ public class TubeRepositoryImpl implements TubeRepository {
         this.entityManager.getTransaction().begin();
 
         try {
-            this.entityManager.merge(entity);
+            this.entityManager.persist(entity);
             this.entityManager.getTransaction().commit();
             return true;
         } catch (Exception ex) {
@@ -63,16 +62,11 @@ public class TubeRepositoryImpl implements TubeRepository {
     }
 
     @Override
-    public void increaseViews(String tubeId) {
+    public void increaseViews(Tube tube) {
         this.entityManager.getTransaction().begin();
 
         try {
-            this.entityManager
-                    .createQuery("UPDATE Tube t " +
-                            "SET t.views = t.views + 1 " +
-                            "WHERE t.id = :id")
-                    .setParameter("id", tubeId)
-                    .executeUpdate();
+            this.entityManager.merge(tube);
         } finally {
             this.entityManager.getTransaction().commit();
         }

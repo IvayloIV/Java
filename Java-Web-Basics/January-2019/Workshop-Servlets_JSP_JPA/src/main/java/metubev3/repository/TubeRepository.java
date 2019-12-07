@@ -8,7 +8,7 @@ import java.util.List;
 public interface TubeRepository extends GenericRepository<Tube, String> {
     public List<Tube> findByUsername(String username);
 
-    public void increaseViews(String tubeId);
+    public void increaseViews(Tube tube);
 
     public List<Tube> findAllWithStatus(TubeStatus status);
 

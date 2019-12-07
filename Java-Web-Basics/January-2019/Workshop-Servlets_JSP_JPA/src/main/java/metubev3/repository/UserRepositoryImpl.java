@@ -2,17 +2,16 @@ package metubev3.repository;
 
 import metubev3.domain.entities.User;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.Persistence;
 import java.util.List;
 
 public class UserRepositoryImpl implements UserRepository {
     private final EntityManager entityManager;
 
-    public UserRepositoryImpl() {
-        this.entityManager = Persistence
-                .createEntityManagerFactory("metybev3")
-                .createEntityManager();
+    @Inject
+    public UserRepositoryImpl(EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
 
     @Override

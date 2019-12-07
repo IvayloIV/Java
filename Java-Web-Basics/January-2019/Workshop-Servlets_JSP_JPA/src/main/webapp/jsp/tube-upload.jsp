@@ -13,7 +13,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="form-holder text-center">
-                    <form class="form-inline" action="/upload-tube" method="POST">
+                    <form class="form-inline" action="/tube/upload" method="POST">
                         <fieldset>
                             <div class="control-group">
                                 <label class="control-label h3 mb-2" for="title">Title</label>

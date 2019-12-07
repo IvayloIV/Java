@@ -12,7 +12,7 @@ public interface TubeService {
 
     public List<TubeServiceModel> getByUsername(String username);
 
-    public void increaseViews(String tubeId);
+    public void increaseViews(TubeServiceModel tube);
 
     public TubeServiceModel getById(String tubeId);
 

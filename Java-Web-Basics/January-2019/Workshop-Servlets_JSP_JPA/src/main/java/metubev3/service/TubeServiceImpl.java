@@ -4,8 +4,7 @@ import metubev3.domain.entities.Tube;
 import metubev3.domain.enums.TubeStatus;
 import metubev3.domain.models.services.TubeServiceModel;
 import metubev3.repository.TubeRepository;
-import metubev3.repository.UserRepository;
-import metubev3.utils.ModelMapper;
+import org.modelmapper.ModelMapper;
 
 import javax.inject.Inject;
 import java.util.List;
@@ -13,11 +12,11 @@ import java.util.stream.Collectors;
 
 public class TubeServiceImpl implements TubeService {
     private final TubeRepository tubeRepository;
-    private final UserRepository userRepository;
+    private final UserService userRepository;
     private final ModelMapper modelMapper;
 
     @Inject
-    public TubeServiceImpl(TubeRepository tubeRepository, UserRepository userRepository, ModelMapper modelMapper) {
+    public TubeServiceImpl(TubeRepository tubeRepository, UserService userRepository, ModelMapper modelMapper) {
         this.tubeRepository = tubeRepository;
         this.userRepository = userRepository;
         this.modelMapper = modelMapper;
@@ -46,8 +45,8 @@ public class TubeServiceImpl implements TubeService {
     }
 
     @Override
-    public void increaseViews(String tubeId) {
-        this.tubeRepository.increaseViews(tubeId);
+    public void increaseViews(TubeServiceModel tube) {
+        this.tubeRepository.increaseViews(this.modelMapper.map(tube, Tube.class));
     }
 
     @Override

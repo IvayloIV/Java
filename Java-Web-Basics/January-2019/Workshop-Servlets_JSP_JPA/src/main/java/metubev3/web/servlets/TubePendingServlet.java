@@ -3,7 +3,7 @@ package metubev3.web.servlets;
 import metubev3.domain.enums.TubeStatus;
 import metubev3.domain.models.views.TubePendingViewModel;
 import metubev3.service.TubeService;
-import metubev3.utils.ModelMapper;
+import org.modelmapper.ModelMapper;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;

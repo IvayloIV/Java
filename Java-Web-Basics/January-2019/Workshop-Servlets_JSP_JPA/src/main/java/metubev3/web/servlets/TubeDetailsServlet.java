@@ -1,8 +1,9 @@
 package metubev3.web.servlets;
 
+import metubev3.domain.models.services.TubeServiceModel;
 import metubev3.domain.models.views.TubeDetailsViewModel;
 import metubev3.service.TubeService;
-import metubev3.utils.ModelMapper;
+import org.modelmapper.ModelMapper;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;
@@ -12,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/tube/details")
+@WebServlet("/tube/details/*")
 public class TubeDetailsServlet extends HttpServlet {
     private final TubeService tubeService;
     private final ModelMapper modelMapper;
@@ -25,13 +26,15 @@ public class TubeDetailsServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String tubeId = req.getQueryString().split("=")[1];
+        String[] urlParts = req.getRequestURI().split("/");
+        String tubeId = urlParts[urlParts.length - 1];
 
-        this.tubeService.increaseViews(tubeId);
-        TubeDetailsViewModel tube = this.modelMapper
-                .map(this.tubeService.getById(tubeId), TubeDetailsViewModel.class);
+        TubeServiceModel tubeServiceModel = this.tubeService.getById(tubeId);
+        tubeServiceModel.setViews(tubeServiceModel.getViews() + 1);
+        this.tubeService.increaseViews(tubeServiceModel);
 
-        req.setAttribute("tube", tube);
+        req.setAttribute("tube", null);
+        req.setAttribute("tube", this.modelMapper.map(tubeServiceModel, TubeDetailsViewModel.class));
         req.getRequestDispatcher("/jsp/tube-details.jsp")
                 .forward(req, resp);
     }

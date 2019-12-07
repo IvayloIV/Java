@@ -39,7 +39,7 @@
                                     <button type="button" class="btn btn-danger">Decline</button>
                                 </a>
                             </td>
-                            <td><a href="/tube/details?id=<%= tubes.get(i).getId() %>">Details</a></td>
+                            <td><a href="/tube/details/<%= tubes.get(i).getId() %>">Details</a></td>
                         </tr>
                     <% } %>
                     </tbody>

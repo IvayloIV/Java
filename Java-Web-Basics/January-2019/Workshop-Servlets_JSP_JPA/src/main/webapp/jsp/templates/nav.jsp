@@ -19,7 +19,7 @@
                         <a class="nav-link h5" href="/profile">Profile</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link h5" href="/upload-tube">Upload</a>
+                        <a class="nav-link h5" href="/tube/upload">Upload</a>
                     </li>
                     <% if (request.getSession().getAttribute("role") == UserRole.Admin) { %>
                     <li class="nav-item active">

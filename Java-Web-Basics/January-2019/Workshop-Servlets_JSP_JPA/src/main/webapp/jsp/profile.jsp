@@ -6,8 +6,8 @@
 <html>
     <c:import url="templates/head.jsp" />
 <body>
-    <% List<TubeProfileViewModel> tubes = (List<TubeProfileViewModel>) request.getAttribute("tubes"); %>
     <% UserProfileViewModel user = (UserProfileViewModel) request.getAttribute("user"); %>
+    <% List<TubeProfileViewModel> tubes = user.getTubes(); %>
     <div class="container-fluid">
         <c:import url="templates/nav.jsp" />
         <hr class="my-2"/>
@@ -33,7 +33,7 @@
                                 <td><%= i + 1 %></td>
                                 <td><%= tubes.get(i).getTitle() %></td>
                                 <td><%= tubes.get(i).getAuthor() %></td>
-                                <td><a href="/tube/details?id=<%= tubes.get(i).getId() %>">Details</a></td>
+                                <td><a href="/tube/details/<%= tubes.get(i).getId() %>">Details</a></td>
                             </tr>
                         <% } %>
                     </tbody>

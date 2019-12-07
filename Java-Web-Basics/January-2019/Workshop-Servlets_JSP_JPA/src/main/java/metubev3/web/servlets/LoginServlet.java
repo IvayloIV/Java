@@ -3,7 +3,7 @@ package metubev3.web.servlets;
 import metubev3.domain.models.bindings.LoginBindingModel;
 import metubev3.domain.models.services.UserServiceModel;
 import metubev3.service.UserService;
-import metubev3.utils.ModelMapper;
+import org.modelmapper.ModelMapper;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;

@@ -5,7 +5,7 @@ import metubev3.domain.enums.TubeStatus;
 public class UploadTubeBindingModel {
     private String title;
     private String author;
-    private String youtubeId;
+    private String youtubeLink;
     private String description;
     private TubeStatus status;
 
@@ -25,12 +25,12 @@ public class UploadTubeBindingModel {
         this.author = author;
     }
 
-    public String getYoutubeId() {
-        return youtubeId;
+    public String getYoutubeLink() {
+        return youtubeLink;
     }
 
-    public void setYoutubeId(String youtubeId) {
-        this.youtubeId = youtubeId;
+    public void setYoutubeLink(String youtubeLink) {
+        this.youtubeLink = youtubeLink;
     }
 
     public String getDescription() {

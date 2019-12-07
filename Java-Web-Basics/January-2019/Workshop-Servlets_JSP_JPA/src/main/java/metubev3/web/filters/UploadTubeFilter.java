@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter("/upload-tube")
+@WebFilter("/tube/upload")
 public class UploadTubeFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
@@ -20,7 +20,7 @@ public class UploadTubeFilter implements Filter {
             UploadTubeBindingModel model = new UploadTubeBindingModel();
             model.setTitle(req.getParameter("title"));
             model.setAuthor(req.getParameter("author"));
-            model.setYoutubeId(req.getParameter("youtube-link").split("=")[1]);
+            model.setYoutubeLink(req.getParameter("youtube-link"));
             model.setDescription(req.getParameter("description"));
             model.setStatus(TubeStatus.Pending);
 

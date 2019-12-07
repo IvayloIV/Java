@@ -1,6 +1,5 @@
 package metubev3.domain.models.services;
 
-import metubev3.domain.entities.User;
 import metubev3.domain.enums.TubeStatus;
 
 public class TubeServiceModel {
@@ -10,7 +9,7 @@ public class TubeServiceModel {
     private String description;
     private String youtubeId;
     private int views;
-    private User uploader;
+    private UserServiceModel uploader;
     private TubeStatus status;
 
     public String getId() {
@@ -61,11 +60,11 @@ public class TubeServiceModel {
         this.views = views;
     }
 
-    public User getUploader() {
+    public UserServiceModel getUploader() {
         return uploader;
     }
 
-    public void setUploader(User uploader) {
+    public void setUploader(UserServiceModel uploader) {
         this.uploader = uploader;
     }
 

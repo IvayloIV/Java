@@ -2,11 +2,23 @@ package metubev3.domain.models.services;
 
 import metubev3.domain.enums.UserRole;
 
+import java.util.List;
+
 public class UserServiceModel {
+    private String id;
     private String username;
     private String password;
     private String email;
     private UserRole role;
+    private List<TubeServiceModel> tubes;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getUsername() {
         return username;
@@ -38,5 +50,13 @@ public class UserServiceModel {
 
     public void setRole(UserRole role) {
         this.role = role;
+    }
+
+    public List<TubeServiceModel> getTubes() {
+        return tubes;
+    }
+
+    public void setTubes(List<TubeServiceModel> tubes) {
+        this.tubes = tubes;
     }
 }

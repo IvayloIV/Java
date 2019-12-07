@@ -4,8 +4,8 @@ import metubev3.domain.entities.User;
 import metubev3.domain.enums.UserRole;
 import metubev3.domain.models.services.UserServiceModel;
 import metubev3.repository.UserRepository;
-import metubev3.utils.ModelMapper;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.modelmapper.ModelMapper;
 
 import javax.inject.Inject;
 
