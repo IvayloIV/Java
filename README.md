@@ -88,6 +88,7 @@
 |03. JavaServer Pages|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/January-2019/JavaServer_Pages)|
 |04. Workshop - Servlets, JSP, JPA|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/January-2019/Workshop-Servlets_JSP_JPA)|
 |05. JavaServer Faces|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/January-2019/JavaServer_Faces)|
+|06. JSF - Libraries, Tags and Templates|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/January-2019/JSF_Libraries_Tags_and_Templates)|
 
 ## Spring MVC
 
