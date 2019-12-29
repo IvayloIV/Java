@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="template/base-layout.xhtml">
+    <ui:define name="main">
+        <div class="jumbotron justify-content-center jumbotron-background">
+            <div class="row">
+                <div class="col col-md-12 d-flex justify-content-center">
+                    <h1>All Cats!</h1>
+                </div>
+            </div>
+            <hr class="hr-background" />
+            <p:dataTable var="cat"
+                         value="#{catListBean.catListViewModel}"
+                         styleClass="table table-striped">
+                <p:column headerText="Name" sortBy="#{cat.name}">
+                    <h:outputText value="#{cat.name}" />
+                </p:column>
+
+                <p:column headerText="Breed" sortBy="#{cat.breed}">
+                    <h:outputText value="#{cat.breed}" />
+                </p:column>
+
+                <p:column headerText="Color" sortBy="#{cat.color}">
+                    <h:outputText value="#{cat.color}" />
+                </p:column>
+
+                <p:column headerText="Gender" sortBy="#{cat.gender}">
+                    <h:outputText value="#{cat.gender}" />
+                </p:column>
+
+                <p:column headerText="Price" sortBy="#{cat.price}">
+                    <h:outputText value="#{cat.price}">
+                        <f:convertNumber currencySymbol="$"
+                                         type="currency"
+                                         minFractionDigits="2"
+                                         maxFractionDigits="2"/>
+                    </h:outputText>
+                </p:column>
+
+                <p:column headerText="Added On" sortBy="#{cat.addedOn}">
+                    <h:outputText value="#{cat.addedOn}">
+                        <f:convertDateTime pattern="yyyy-MM-dd" />
+                    </h:outputText>
+                </p:column>
+            </p:dataTable>
+        </div>
+    </ui:define>
+</ui:composition>
+
+</html>

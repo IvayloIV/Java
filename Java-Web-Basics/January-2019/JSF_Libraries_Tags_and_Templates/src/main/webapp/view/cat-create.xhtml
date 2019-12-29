@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:in = "http://java.sun.com/jsf/composite/components">
+
+<ui:composition template="template/base-layout.xhtml">
+    <ui:define name="main">
+        <div class="jumbotron justify-content-center jumbotron-background">
+            <div class="row">
+                <div class="col col-md-12 d-flex justify-content-center">
+                    <h1>Create Cat!</h1>
+                </div>
+            </div>
+            <hr class="hr-background" />
+            <h:form>
+                <h:messages id="messages"  styleClass="messages" />
+                <in:inputComponent
+                        labelTitle="Name"
+                        inputId="catNameInput"
+                        inputValue="#{createCatBean.catCreateBindingModel.name}" />
+                <in:inputComponent
+                        labelTitle="Breed"
+                        inputId="catBreedInput"
+                        inputValue="#{createCatBean.catCreateBindingModel.breed}"
+                        minLength="5"
+                        maxLength="20"/>
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="form-group">
+                            <h:outputLabel value="Color" for="catColorInput" />
+                            <h:inputText id="catColorInput" value="#{createCatBean.catCreateBindingModel.color}" styleClass="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="form-group">
+                            <h:outputLabel value="Age" for="catAgeInput" />
+                            <p:inputNumber id="catAgeInput" value="#{createCatBean.catCreateBindingModel.age}" styleClass="form-control">
+                                <f:validateLongRange minimum="1" maximum="31" />
+                            </p:inputNumber>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="form-group">
+                            <h:outputLabel value="Price" for="catPriceInput" />
+                            <p:inputNumber id="catPriceInput" value="#{createCatBean.catCreateBindingModel.price}" styleClass="form-control">
+                                <f:validateDoubleRange minimum="0.01" />
+                            </p:inputNumber>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-background" />
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                            <h:outputLabel value="Gender:" class="mr-4" for="catGenderRadio" />
+                            <p:selectOneRadio id="catGenderRadio" value="#{createCatBean.catCreateBindingModel.gender}" unselectable="false">
+                                <f:selectItem itemLabel="Male" itemValue="male" />
+                                <f:selectItem itemLabel="Female" itemValue="female" />
+                            </p:selectOneRadio>
+                        </h:panelGrid>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="form-check">
+                            <p:selectBooleanCheckbox styleClass="form-check-label mr-4" value="#{createCatBean.catCreateBindingModel.hasPassport}" itemLabel="Has passport"/>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-background" />
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <p:outputLabel for="addedOn" value="Added On:" />
+                        <p:calendar id="addedOn" value="#{createCatBean.catCreateBindingModel.addedOn}" />
+                    </div>
+                </div>
+                <hr class="hr-background" />
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <h:commandButton id="createCatButton"
+                                         value="Create cat"
+                                         styleClass="btn btn-success"
+                                         action="#{createCatBean.createCat}" />
+                    </div>
+                </div>
+            </h:form>
+        </div>
+    </ui:define>
+</ui:composition>
+
+</html>

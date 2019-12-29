@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition>
+    <nav class="navbar navbar-expand-lg navbar-background">
+        <h:form>
+            <h:commandLink action="index.xhtml" value="FDMC" styleClass="navbar-brand h4" />
+        </h:form>
+        <span class="navbar-toggler-icon" />
+        <div class="collapse navbar-collapse justify-content-end row" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active col-md-6">
+                    <h:form>
+                        <h:commandLink action="cat-create.xhtml" value="Create Cat" styleClass="nav-link h5" style="white-space: nowrap;" />
+                    </h:form>
+                </li>
+                <li class="nav-item active col-md-6">
+                    <h:form>
+                        <h:commandLink action="all-cats.xhtml" value="All Cats" styleClass="nav-link h5" />
+                    </h:form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</ui:composition>
+
+</html>

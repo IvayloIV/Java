@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:composite = "http://java.sun.com/jsf/composite">
+
+    <composite:interface>
+        <composite:attribute name = "labelTitle" type="String" required="true" />
+        <composite:attribute name = "inputId" type="String" required="true" />
+        <composite:attribute name = "inputValue" type="String" required="true" />
+        <composite:attribute name = "minLength" default="2" />
+        <composite:attribute name = "maxLength" default="10" />
+    </composite:interface>
+
+    <composite:implementation>
+        <div class="row">
+            <div class="col-md-12  d-flex justify-content-center">
+                <div class="form-group">
+                    <h:outputLabel value="#{cc.attrs.labelTitle}" for="#{cc.attrs.inputId}" />
+                    <h:inputText id="#{cc.attrs.inputId}" value="#{cc.attrs.inputValue}" styleClass="form-control">
+                        <f:validateLength minimum="#{cc.attrs.minLength}" maximum="#{cc.attrs.maxLength}" />
+                    </h:inputText>
+                </div>
+            </div>
+        </div>
+    </composite:implementation>
+</html>
