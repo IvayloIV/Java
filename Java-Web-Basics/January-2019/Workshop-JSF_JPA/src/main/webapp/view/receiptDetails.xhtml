@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-content">
+        <h1 class="text-center">Receipt Details</h1>
+        <hr class="hr-2 bg-panda"/>
+        <div class="mx-auto">
+            <div class="receipt-id-handler d-flex justify-content-between">
+                <h3>Receipt Number:</h3>
+                <h3><h:outputText value="#{receiptDetailsBean.receiptDetailsVM.id}"/></h3>
+            </div>
+            <hr class="hr-2 bg-panda"/>
+            <div class="d-flex justify-content-between">
+                <h4>Issued On:</h4>
+                <h4>
+                    <h:outputText value="#{receiptDetailsBean.receiptDetailsVM.issuedOn}">
+                        <f:convertDateTime type="date" dateStyle="short"/>
+                    </h:outputText>
+                </h4>
+            </div>
+            <div class="d-flex justify-content-between">
+                <h4>Delivery Address:</h4>
+                <h4><h:outputText value="#{receiptDetailsBean.receiptDetailsVM.receiptPackage.shippingAddress}"/></h4>
+            </div>
+            <hr class="hr-2 bg-panda"/>
+            <div class="d-flex justify-content-between">
+                <h4>Package Weight (KG):</h4>
+                <h4><h:outputText value="#{receiptDetailsBean.receiptDetailsVM.receiptPackage.weight}"/></h4>
+            </div>
+            <div class="d-flex justify-content-between">
+                <h4>Package Description:</h4>
+                <h4><h:outputText value="#{receiptDetailsBean.receiptDetailsVM.receiptPackage.description}"/></h4>
+            </div>
+            <div class="d-flex justify-content-between">
+                <h4>Recipient:</h4>
+                <h4><h:outputText value="#{receiptDetailsBean.receiptDetailsVM.recipientUsername}"/></h4>
+            </div>
+            <hr class="hr-2 bg-panda"/>
+            <div class="fee-holder d-flex justify-content-end">
+                <h3>Total: $<h:outputText value="#{receiptDetailsBean.receiptDetailsVM.fee}"/></h3>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
+
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-content">
+        <h1 class="text-center">My Receipts</h1>
+        <hr class="hr-2 bg-panda"/>
+        <p:dataTable var="receipt" value="#{myReceiptsBean.myReceiptVM}">
+            <p:column headerText="Id">
+                <h:outputText value="#{receipt.id}" />
+            </p:column>
+
+            <p:column headerText="Fee">
+                <h:outputText value="#{receipt.fee}" />
+            </p:column>
+
+            <p:column headerText="Issued On">
+                <h:outputText value="#{receipt.issuedOn}">
+                    <f:convertDateTime type="date" dateStyle="short"/>
+                </h:outputText>
+            </p:column>
+
+            <p:column headerText="Recipient">
+                <h:outputText value="#{receipt.recipientUsername}" />
+            </p:column>
+
+            <p:column headerText="Actions">
+                <h:link outcome="receiptDetails" value="Details" styleClass="btn bg-panda text-white">
+                    <f:param name="receiptId" value="#{receipt.id}" />
+                </h:link>
+            </p:column>
+        </p:dataTable>
+    </ui:define>
+</ui:composition>
+
+</html>

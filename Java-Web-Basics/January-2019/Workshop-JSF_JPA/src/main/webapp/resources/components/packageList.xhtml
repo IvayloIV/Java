@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<composite:interface>
+    <composite:attribute name = "packs" type="PackageHomeViewModel" required="true" />
+    <composite:attribute name = "status" type="String" required="true" />
+</composite:interface>
+
+<composite:implementation>
+    <c:forEach items="#{cc.attrs.packs}" var="pack">
+        <c:choose>
+            <c:when test="#{pack.status == cc.attrs.status}">
+                <div class="p-2 d-flex justify-content-around">
+                    <h4 class="w-75"><h:outputText value="#{pack.description}"/></h4>
+                    <h:link outcome="detailsPackage" value="Details" styleClass="btn bg-panda text-white w-25">
+                        <f:param name="packageId" value="#{pack.id}"/>
+                    </h:link>
+                </div>
+            </c:when>
+        </c:choose>
+    </c:forEach>
+</composite:implementation>
+</html>
