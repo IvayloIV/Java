@@ -94,6 +94,7 @@
 |Exam Name||
 |--|:--:|
 |Sboj|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Sboj)|
+|Casebook|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Casebook)|
 
 ## Spring MVC
 
