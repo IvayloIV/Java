@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <hr class="my-2"/>
+        <div class="text-center mt-3">
+            <h:link outcome="profile"
+                    value="Welcome, #{session.getAttribute('username')}"
+                    styleClass="h4 text-info">
+                <f:param name="userId" value="#{session.getAttribute('id')}"/>
+            </h:link>
+        </div>
+        <hr class="my-4"/>
+        <div class="container">
+            <c:forEach items="#{homeBean.usersVM}" var="user" varStatus="i">
+                <h:outputText value="&lt;div class='row mb-4 d-flex justify-content-around'&gt;" rendered="#{i.index % 4 == 0}" escape="false"/>
+                <div class="col-md-2 d-flex flex-column text-center">
+                    <h:graphicImage library="casebook-app-lib"
+                                    name="/png/#{user.gender.name().toLowerCase()}.png"
+                                    styleClass="img-thumbnail"
+                                    width="200"
+                                    height="200"/>
+                    <h5 class="text-center">
+                        <h:link outcome="profile" value="#{user.username}">
+                            <f:param name="userId" value="#{user.id}"/>
+                        </h:link>
+                    </h5>
+                    <h:form>
+                        <h:commandButton action="#{homeBean.addNewFriend(user.id)}"
+                                         styleClass="btn btn-info"
+                                         value="Add Friend"/>
+                    </h:form>
+                </div>
+                <h:outputText value="&lt;/div&gt;" rendered="#{i.index % 4 == 3}" escape="false"/>
+            </c:forEach>
+        </div>
+        <hr class="my-3"/>
+    </ui:define>
+</ui:composition>
+
+</html>
