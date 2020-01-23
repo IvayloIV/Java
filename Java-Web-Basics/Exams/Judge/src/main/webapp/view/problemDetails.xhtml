@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <h1 class="text-center text-judge">Problem Details - #{problemDetailsBean.problemDetailsVM.name}</h1>
+        <hr class="hr-2 bg-judge"/>
+        <div class="d-flex justify-content-between">
+            <h2 class="text-judge">Problem Id - #{problemDetailsBean.problemDetailsVM.id}</h2>
+            <h2 class="text-judge">Success Rate -
+                <h:outputText value="#{problemDetailsBean.successRate}">
+                    <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                </h:outputText> %
+            </h2>
+        </div>
+        <hr class="hr-2 bg-judge"/>
+        <h3 class="text-judge text-center">Problem Submissions</h3>
+        <hr class="hr-2 bg-judge"/>
+        <table class="table table-hover text-judge">
+            <thead>
+            <tr class="row">
+                <th class="col-md-4" scope="col"><h5 class="text-center">Submission</h5></th>
+                <th class="col-md-3" scope="col"><h5 class="text-center">User</h5></th>
+                <th class="col-md-3" scope="col"><h5 class="text-center">Achieved Result</h5></th>
+                <th class="col-md-2" scope="col"><h5 class="text-center">Actions</h5></th>
+            </tr>
+            </thead>
+            <tbody>
+                <c:forEach items="#{problemDetailsBean.problemDetailsVM.submissions}" var="submission">
+                    <tr class="row">
+                        <td class="col-md-4" scope="col"><h5 class="text-center">#{submission.id}</h5></td>
+                        <td class="col-md-3" scope="col"><h5 class="text-center">#{submission.userUsername}</h5></td>
+                        <td class="col-md-3" scope="col">
+                            <h2 class="text-center">
+                                #{submission.achievedResult} / #{problemDetailsBean.problemDetailsVM.points} (#{submission.percentagePoints} %)
+                            </h2>
+                        </td>
+                        <td class="col-md-2 d-flex justify-content-around" scope="col">
+                            <h:link outcome="submissionDetails" styleClass="btn bg-judge text-white font-weight-bold pt-2">
+                                <f:param name="submissionId" value="#{submission.id}"/>
+                                <h4>Details</h4>
+                            </h:link>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+        <hr class="hr-2 bg-judge"/>
+    </ui:define>
+</ui:composition>
+
+</html>

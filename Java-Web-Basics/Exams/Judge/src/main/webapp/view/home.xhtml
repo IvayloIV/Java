@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <div id="problems">
+            <div class="problem-row d-flex justify-content-around row mt-4">
+                <c:forEach items="#{homeProblemBean.problemHomeVM}" var="problem">
+                    <div class="problem bg-judge text-white rounded p-3 col-md-2">
+
+                            <h5 class="text-center font-weight-bold">#{problem.name}</h5>
+                            <h5 class="text-center mt-3">Completed: #{problem.completed}%</h5>
+                            <hr class="hr-2 bg-white"/>
+                            <div class="d-flex justify-content-between mt-4">
+                                <h:link outcome="createSubmission" styleClass="text-white font-weight-bold">
+                                    <f:param name="problemId" value="#{problem.id}"/>
+                                    <h5>Submit</h5>
+                                </h:link>
+                                <h:link outcome="problemDetails" styleClass="text-white font-weight-bold">
+                                    <f:param name="problemId" value="#{problem.id}"/>
+                                    <h5>Details</h5>
+                                </h:link>
+                            </div>
+                    </div>
+                </c:forEach>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
+
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <h1 class="text-judge text-center font-weight-bold">Register</h1>
+        <hr class="hr-2 bg-judge w-25"/>
+        <h:form id="register-form" styleClass="form w-25 mx-auto">
+            <div class="form-group">
+                <div class="d-flex justify-content-center">
+                    <h:outputLabel value="Username" for="username" styleClass="text-judge font-weight-bold"/>
+                </div>
+                <p:inputText value="#{registerUserBean.registerUserBindingModel.username}"
+                             styleClass="form-control"
+                             id="username"
+                             placeholder="Username..."/>
+            </div>
+            <div class="form-group">
+                <div class="d-flex justify-content-center">
+                    <h:outputLabel value="Password" for="password" styleClass="text-judge font-weight-bold"/>
+                </div>
+                <p:password value="#{registerUserBean.registerUserBindingModel.password}"
+                             styleClass="form-control"
+                             id="password"
+                             placeholder="Password..."/>
+            </div>
+            <div class="form-group">
+                <div class="d-flex justify-content-center">
+                    <h:outputLabel value="Confirm Password" for="confirm-password" styleClass="text-judge font-weight-bold"/>
+                </div>
+                <p:password value="#{registerUserBean.registerUserBindingModel.confirmPassword}"
+                            styleClass="form-control"
+                            id="confirm-password"
+                            placeholder="Confirm Password..."/>
+            </div>
+            <div class="form-group">
+                <div class="d-flex justify-content-center">
+                    <label for="email" class="text-judge font-weight-bold">Email</label>
+                    <h:outputLabel value="Email" for="email" styleClass="text-judge font-weight-bold"/>
+                </div>
+                <p:inputText value="#{registerUserBean.registerUserBindingModel.email}"
+                            styleClass="form-control"
+                            id="email"
+                            placeholder="Email..."/>
+            </div>
+            <hr class="hr-2 bg-judge"/>
+            <div id="button-holder" class="d-flex justify-content-center">
+                <h:commandButton action="#{registerUserBean.register}"
+                                 value="Regiter"
+                                 styleClass="btn btn-judge"/>
+            </div>
+            <hr class="hr-2 bg-judge"/>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+</html>

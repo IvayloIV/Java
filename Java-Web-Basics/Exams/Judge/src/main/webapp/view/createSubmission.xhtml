@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <h1 class="text-center text-judge">Problem - #{createSubmissionBean.createSubmissionBM.problemName}</h1>
+        <hr class="hr-2 bg-judge"/>
+        <h3 class="text-judge my-3">Submit your code here:</h3>
+        <h:form id="create-submission-form" styleClass="form">
+            <div class="w-100 rounded bg-code text-code d-flex flex-column p-3">
+                <p:inputTextarea value="#{createSubmissionBean.createSubmissionBM.code}"
+                                 styleClass="code-line"/>
+            </div>
+            <hr class="hr-2 bg-judge"/>
+            <div class="d-flex justify-content-center">
+                <h:commandButton action="#{createSubmissionBean.createSubmission}"
+                                 styleClass="btn bg-judge font-weight-bold text-white"
+                                 value="Submit">
+                    <f:param name="problemId" value="#{param['problemId']}"/>
+                </h:commandButton>
+            </div>
+            <hr class="hr-2 bg-judge"/>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+</html>
