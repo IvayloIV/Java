@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <h1 class="text-center text-mishmash">Create Channel</h1>
+        <hr class="hr-2 bg-mishmash w-50"/>
+        <h:form styleClass="mx-auto w-50">
+            <div class="form-group">
+                <h:outputLabel value="Name" for="name" styleClass="text-mishmash"/>
+                <p:inputText value="#{createChannelBean.channelCreateBM.name}"
+                             styleClass="form-control"
+                             id="name"
+                             placeholder="Name..."/>
+            </div>
+            <div class="form-group">
+                <h:outputLabel value="Description" for="description" styleClass="text-mishmash"/>
+                <p:inputTextarea value="#{createChannelBean.channelCreateBM.description}"
+                             styleClass="form-control"
+                             rows="4"
+                             id="description"
+                             placeholder="Description..."/>
+            </div>
+            <div class="channel-tags-holder mt-4">
+                <div class="form-group">
+                    <div class="d-flex justify-content-center">
+                        <h:outputLabel value="Tags" for="tags" styleClass="text-mishmash"/>
+                    </div>
+                    <p:inputText value="#{createChannelBean.channelCreateBM.tags}"
+                                 styleClass="form-control"
+                                 id="tags"
+                                 placeholder="Tag1, Tag2, Tag3..."/>
+                </div>
+            </div>
+            <h4 class="text-center text-mishmash">Channel Type</h4>
+            <hr class="hr-2 bg-mishmash w-50 mt-4"/>
+            <div class="channel-type-holder mt-4 d-flex justify-content-around">
+                <p:selectOneRadio value="#{createChannelBean.channelCreateBM.type}">
+                    <f:selectItems value="#{createChannelBean.channelTypes}"
+                                   var="channel"
+                                   itemLabel="#{channel}"
+                                   itemValue="#{channel}"/>
+                </p:selectOneRadio>
+            </div>
+            <hr class="hr-2 bg-mishmash w-50 mt-4"/>
+            <div class="button-holder mt-2 d-flex justify-content-center">
+                <h:commandButton action="#{createChannelBean.createChannel}"
+                                 value="Create"
+                                 styleClass="btn bg-mishmash text-white"/>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+</html>

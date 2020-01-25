@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: MASTER
+  Date: 25.1.2020 г.
+  Time: 22:28 ч.
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <hr class="hr-2 bg-mishmash"/>
+        <div class="channel-main-data-holder w-75 mx-auto d-flex justify-content-between">
+            <h3 class="text-center text-mishmash">Channel: #{channelDetailsBean.channelDetailsVM.name}</h3>
+            <h3 class="text-center text-mishmash">Type: #{channelDetailsBean.channelDetailsVM.type}</h3>
+            <h3 class="text-center text-mishmash">Followers: #{channelDetailsBean.channelDetailsVM.followers.size()}</h3>
+        </div>
+        <hr class="hr-2 bg-mishmash"/>
+        <h3 class="text-center text-mishmash">Tags</h3>
+        <div class="channel-tags-holder w-75 mx-auto">
+            <h6 class="text-center text-mishmash">#{channelDetailsBean.channelDetailsVM.tags}</h6>
+        </div>
+        <hr class="hr-2 bg-mishmash"/>
+        <h3 class="text-center text-mishmash">Description</h3>
+        <div class="product-description-holder">
+            <p class="text-center text-mishmash mt-4">
+                #{channelDetailsBean.channelDetailsVM.description}
+            </p>
+        </div>
+        <hr class="hr-2 bg-mishmash"/>
+        <div class="button-holder d-flex justify-content-center">
+            <h:link outcome="home" value="Back" styleClass="btn bg-mishmash text-white"/>
+        </div>
+    </ui:define>
+</ui:composition>
+
+</html>

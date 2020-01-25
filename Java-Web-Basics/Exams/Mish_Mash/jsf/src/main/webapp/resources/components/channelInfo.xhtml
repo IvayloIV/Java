@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<composite:interface>
+    <composite:attribute name="channels" type="ChannelHomeViewModel" required="true" />
+    <composite:attribute name="isFollowed" type="boolean" default="false" />
+</composite:interface>
+
+<composite:implementation>
+    <c:forEach items="#{cc.attrs.channels}" var="channel" varStatus="i">
+        <h:outputText value="&lt;div class='channels-row row mt-4 justify-content-start'&gt;" rendered="#{i.index % 5 == 0}" escape="false"/>
+        <div class="channel col mx-3 bg-mishmash rounded py-3 col-2">
+            <h6 class="channel-name text-white text-center">#{channel.name}</h6>
+            <hr class="bg-white hr-2 w-75"/>
+            <h6 class="channel-name text-white text-center">#{channel.description}</h6>
+            <hr class="bg-white hr-2 w-75"/>
+            <h6 class="channel-name text-white text-center">#{channel.followers.size()} Following</h6>
+            <hr class="bg-white hr-2 w-75"/>
+            <div class="follow-button-holder d-flex justify-content-center">
+                <c:choose>
+                    <c:when test="#{cc.attrs.isFollowed}">
+                        <h:outputText value="Following" styleClass="text-center text-white"/>
+                    </c:when>
+                    <c:otherwise>
+                        <h:form>
+                            <h:commandLink action="#{channelHomeBean.followChannel(channel.id)}"
+                                           value="Follow"
+                                           styleClass="text-center text-white"/>
+                        </h:form>
+                        <h:link outcome="channelDetails" value="Details" styleClass="text-center text-white ml-3">
+                            <f:param name="channelId" value="#{channel.id}"/>
+                        </h:link>
+                    </c:otherwise>
+                </c:choose>
+            </div>
+        </div>
+        <h:outputText value="&lt;/div&gt;" rendered="#{i.index % 5 == 4}" escape="false"/>
+    </c:forEach>
+</composite:implementation>
+
+</html>

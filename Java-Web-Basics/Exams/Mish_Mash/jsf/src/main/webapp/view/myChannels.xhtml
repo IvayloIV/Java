@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <h1 class="text-center text-mishmash">Following</h1>
+        <hr class="hr-2 bg-mishmash"/>
+        <table class="table w-75 mx-auto table-hover">
+            <thead>
+            <tr class="row">
+                <th class="col-md-1">#</th>
+                <th class="col-md-5">Channel</th>
+                <th class="col-md-1">Type</th>
+                <th class="col-md-2">Followers</th>
+                <th class="col-md-2">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="#{myChannelsBean.myChannelsVM}" var="channel" varStatus="i">
+                <tr class="row">
+                    <th class="col-md-1">#{i.index + 1}</th>
+                    <td class="col-md-5">#{channel.name}</td>
+                    <td class="col-md-1">#{channel.type}</td>
+                    <td class="col-md-2">#{channel.followers.size()}</td>
+                    <td class="col-md-2">
+                        <div class="button-holder d-flex justify-content-between">
+                            <h:form>
+                                <h:commandButton action="#{myChannelsBean.unfollowChannel(channel.id)}"
+                                                 value="Unfollow"
+                                                 styleClass="btn bg-mishmash text-white"/>
+                            </h:form>
+                            <h:link outcome="channelDetails" value="Details" styleClass="btn bg-mishmash text-white">
+                                <f:param name="channelId" value="#{channel.id}"/>
+                            </h:link>
+                        </div>
+                    </td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+    </ui:define>
+</ui:composition>
+
+</html>
