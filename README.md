@@ -91,11 +91,12 @@
 |06. JSF - Libraries, Tags and Templates|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/January-2019/JSF_Libraries_Tags_and_Templates)|
 |07. Workshop - JSF, JPA|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/January-2019/Workshop-JSF_JPA)|
 
-|Exam Name||
-|--|:--:|
-|Sboj|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Sboj)|
-|Casebook|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Casebook)|
-|Judge|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Judge)|
+|Exam Name|Jsf|Jsp|
+|--|:--:|:--:|
+|Sboj|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Sboj)||
+|Casebook|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Casebook)||
+|Judge|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Judge)||
+|Mish Mash|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Mish_Mash/jsf)||
 
 ## Spring MVC
 
