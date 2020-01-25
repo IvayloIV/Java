@@ -91,7 +91,7 @@
 |06. JSF - Libraries, Tags and Templates|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/January-2019/JSF_Libraries_Tags_and_Templates)|
 |07. Workshop - JSF, JPA|[Exercise](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/January-2019/Workshop-JSF_JPA)|
 
-|Exam Name|Jsf|Jsp|
+|Exam Name|JSF|JSP|
 |--|:--:|:--:|
 |Sboj|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Sboj)||
 |Casebook|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Casebook)||
