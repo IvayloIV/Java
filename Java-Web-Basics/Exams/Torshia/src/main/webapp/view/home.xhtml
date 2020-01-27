@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <h4 class="text-torshia text-center">Welcome,
+            <h:outputText value="Admin-" rendered="#{session.getAttribute('role') eq 'Admin'}"/>#{session.getAttribute('username')}!
+        </h4>
+        <h4 class="text-torshia text-center">Have a nice tasking experience!</h4>
+        <hr class="hr-2 bg-torshia"/>
+        <div class="tasks-holder">
+            <c:forEach items="#{homeBean.taskHomeVM}" var="task" varStatus="i">
+                <h:outputText rendered="#{i.index % 5 == 0}" value="&lt;div class='tasks-row row mt-4 justify-content-start'&gt;" escape="false"/>
+                <div class="task col mx-3 bg-torshia rounded py-3 col-2">
+                    <h6 class="task-title text-white text-center my-3">#{task.title}</h6>
+                    <hr class="bg-white hr-2 w-75"/>
+                    <h6 class="task-title text-white text-center my-4">Level: #{task.level}</h6>
+                    <hr class="bg-white hr-2 w-75"/>
+                    <div class="follow-button-holder d-flex justify-content-between w-50 mx-auto mt-4">
+                        <h:form>
+                            <h:commandLink action="#{homeBean.createReport(task.id)}"
+                                           value="Report"
+                                           styleClass="text-center text-white"/>
+                        </h:form>
+                        <h:link outcome="taskDetails" styleClass="text-center text-white" value="Details">
+                            <f:param name="taskId" value="#{task.id}"/>
+                        </h:link>
+                    </div>
+                </div>
+                <h:outputText rendered="#{i.index % 5 == 4}" value="&lt;/div&gt;" escape="false"/>
+            </c:forEach>
+        </div>
+    </ui:define>
+</ui:composition>
+
+</html>

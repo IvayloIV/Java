@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <h1 class="text-center text-torshia">Task Reports</h1>
+        <hr class="hr-2 bg-torshia"/>
+        <table class="table w-75 mx-auto table-hover">
+            <thead>
+            <tr class="row">
+                <th class="col-md-1">#</th>
+                <th class="col-md-5">Task</th>
+                <th class="col-md-1">Level</th>
+                <th class="col-md-2">Status</th>
+                <th class="col-md-2">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="#{reportAllBean.taskReportsVM}" var="task" varStatus="i">
+                <tr class="row">
+                    <th class="col-md-1">#{i.index + 1}</th>
+                    <td class="col-md-5">#{task.taskTitle}</td>
+                    <td class="col-md-1">#{task.level}</td>
+                    <td class="col-md-2">#{task.reportStatus}</td>
+                    <td class="col-md-2">
+                        <div class="button-holder d-flex justify-content-between">
+                            <h:link outcome="reportDetails" value="Details" styleClass="btn bg-torshia text-white">
+                                <f:param name="taskId" value="#{task.taskId}"/>
+                            </h:link>
+                        </div>
+                    </td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+    </ui:define>
+</ui:composition>
+
+</html>

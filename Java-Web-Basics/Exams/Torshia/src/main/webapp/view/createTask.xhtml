@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <h1 class="text-center text-torshia">Create Task</h1>
+        <hr class="hr-2 bg-torshia w-50"/>
+        <h:form styleClass="mx-auto w-50">
+            <div class="row d-flex justify-content-between">
+                <div class="form-group col-md-5">
+                    <h:outputLabel for="title" value="Title" styleClass="text-torshia"/>
+                    <p:inputText value="#{createTaskBean.taskCreateBM.title}"
+                                 styleClass="form-control"
+                                 id="title"
+                                 placeholder="Title..."/>
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="dueDate" class="text-torshia">Due Date</label>
+                    <p:calendar id="dueDate"
+                                styleClass="form-control"
+                                value="#{createTaskBean.taskCreateBM.dueDate}"
+                                placeholder="Due Date..." />
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="description" value="Description" styleClass="text-torshia"/>
+                <p:inputTextarea value="#{createTaskBean.taskCreateBM.description}"
+                             styleClass="form-control"
+                             id="description"
+                             rows="4"
+                             placeholder="Description..."/>
+            </div>
+            <div class="channel-tags-holder mt-4">
+                <div class="form-group">
+                    <div class="d-flex justify-content-center">
+                        <h:outputLabel for="participants" value="Participants" styleClass="text-torshia"/>
+                    </div>
+                    <p:inputText value="#{createTaskBean.taskCreateBM.participants}"
+                                 styleClass="form-control"
+                                 id="participants"
+                                 placeholder="Participant1, Participant2, Participant3..."/>
+                </div>
+            </div>
+            <h6 class="text-center text-torshia">Affected Sectors</h6>
+            <hr class="hr-2 bg-torshia w-50 mt-4"/>
+            <div class="channel-type-holder mt-4 d-flex justify-content-around">
+                <div class="form-check form-check-inline">
+                    <p:selectManyCheckbox id="sectors" value="#{createTaskBean.taskCreateBM.affectedSectors}" layout="grid" columns="5">
+                        <f:selectItems value="#{createTaskBean.sectors}" var="sector" itemLabel="#{sector}" itemValue="#{sector}" />
+                    </p:selectManyCheckbox>
+                </div>
+            </div>
+            <hr class="hr-2 bg-torshia w-50 mt-4"/>
+            <div class="button-holder mt-2 d-flex justify-content-center">
+                <h:commandButton action="#{createTaskBean.createTask}"
+                                 value="Create"
+                                 styleClass="btn bg-torshia text-white"/>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+</html>

@@ -1,0 +1,46 @@
+<pretty-config xmlns="http://ocpsoft.org/schema/rewrite-config-prettyfaces"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://ocpsoft.org/schema/rewrite-config-prettyfaces
+                      http://ocpsoft.org/xml/ns/prettyfaces/rewrite-config-prettyfaces.xsd">
+
+    <url-mapping id="index">
+        <pattern value="/" />
+        <view-id value="/faces/view/index.xhtml" />
+    </url-mapping>
+
+    <url-mapping id="login">
+        <pattern value="/user/login" />
+        <view-id value="/faces/view/login.xhtml" />
+    </url-mapping>
+
+    <url-mapping id="register">
+        <pattern value="/user/register" />
+        <view-id value="/faces/view/register.xhtml" />
+    </url-mapping>
+
+    <url-mapping id="home">
+        <pattern value="/home" />
+        <view-id value="/faces/view/home.xhtml" />
+    </url-mapping>
+
+    <url-mapping id="createTask">
+        <pattern value="/task/create" />
+        <view-id value="/faces/view/createTask.xhtml" />
+    </url-mapping>
+
+    <url-mapping id="taskDetails">
+        <pattern value="/task/details" />
+        <view-id value="/faces/view/taskDetails.xhtml" />
+    </url-mapping>
+
+    <url-mapping id="reportAll">
+        <pattern value="/report/all" />
+        <view-id value="/faces/view/reportAll.xhtml" />
+    </url-mapping>
+
+    <url-mapping id="reportDetails">
+        <pattern value="/report/details" />
+        <view-id value="/faces/view/reportDetails.xhtml" />
+    </url-mapping>
+
+</pretty-config>

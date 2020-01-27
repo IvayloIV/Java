@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <div class="jumbotron mt-3">
+            <div class="task-head">
+                <h1 class="text-center text-torshia">#{taskDetailsBean.taskDetailVM.title}</h1>
+            </div>
+            <hr class="hr-2 bg-torshia"/>
+            <div class="task-main-data-holder w-75 mx-auto d-flex justify-content-between">
+                <h3 class="text-center text-torshia">Level: #{taskDetailsBean.taskDetailVM.level}</h3>
+                <h3 class="text-center text-torshia">Due Date:
+                    <h:outputText value="#{taskDetailsBean.taskDetailVM.dueDate}">
+                        <f:convertDateTime pattern="dd/MM/yyyy"/>
+                    </h:outputText>
+                </h3>
+            </div>
+            <hr class="hr-2 bg-torshia"/>
+            <div class="task-secondary-data-holder row d-flex justify-content-between">
+                <div class="task-participants-holder col-md-5">
+                    <h3 class="text-center text-torshia">Participants</h3>
+                    <div class="task-tags-holder w-75 mx-auto">
+                        <h6 class="text-center text-torshia">#{taskDetailsBean.taskDetailVM.participants}</h6>
+                    </div>
+                </div>
+                <div class="task-participants-holder col-md-5">
+                    <h3 class="text-center text-torshia">Affected Sectors</h3>
+                    <div class="task-tags-holder w-75 mx-auto">
+                        <h6 class="text-center text-torshia">#{taskDetailsBean.taskDetailVM.affectedSectors}</h6>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr-2 bg-torshia"/>
+            <h3 class="text-center text-torshia">Description</h3>
+            <div class="product-description-holder">
+                <p class="text-center text-torshia mt-4">#{taskDetailsBean.taskDetailVM.description}</p>
+            </div>
+            <hr class="hr-2 bg-torshia"/>
+            <div class="button-holder d-flex justify-content-center">
+                <h:link outcome="home" value="Bach" styleClass="btn bg-torshia text-white"/>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
+
+</html>
