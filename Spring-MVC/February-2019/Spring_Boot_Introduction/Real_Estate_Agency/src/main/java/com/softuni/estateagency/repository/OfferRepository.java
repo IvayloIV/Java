@@ -1,6 +1,6 @@
-package com.example.intro.repositories;
+package com.softuni.estateagency.repository;
 
-import com.example.intro.domain.entities.Offer;
+import com.softuni.estateagency.domain.entities.Offer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -11,8 +11,10 @@ import java.util.List;
 
 @Repository
 public interface OfferRepository extends JpaRepository<Offer, String> {
+
     @Query("SELECT o FROM Offer o " +
             "WHERE o.apartmentType = :apartmentType " +
-            "   AND o.apartmentRent * (1 + o.agencyCommission / 100) <= :budget")
-    List<Offer> findByApartmentTypeAndCommission(@Param("apartmentType") String apartmentType, @Param("budget") BigDecimal budget);
+                "AND o.apartmentRent + (o.apartmentRent * o.agencyCommission / 100) <= :apartmentBudget")
+    public List<Offer> getByApartmentTypeAndBudget(@Param("apartmentType") String apartmentType,
+                                            @Param("apartmentBudget") BigDecimal apartmentBudget);
 }

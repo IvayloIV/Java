@@ -1,13 +1,13 @@
-package com.example.intro;
+package com.softuni.estateagency;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class IntroApplication {
+public class EstateagencyApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(IntroApplication.class, args);
+        SpringApplication.run(EstateagencyApplication.class, args);
     }
 
 }

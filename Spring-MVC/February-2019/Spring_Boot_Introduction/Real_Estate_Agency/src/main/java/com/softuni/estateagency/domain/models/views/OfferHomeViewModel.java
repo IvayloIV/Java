@@ -1,23 +1,13 @@
-package com.example.intro.domain.models;
+package com.softuni.estateagency.domain.models.views;
 
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 
-public class OfferRegisterBindingModel {
-    @NotNull
-    @DecimalMin("0.01")
+public class OfferHomeViewModel {
+
     private BigDecimal apartmentRent;
 
-    @NotNull
-    @Size(min = 1)
     private String apartmentType;
 
-    @NotNull
-    @DecimalMin("0")
-    @DecimalMax("100")
     private BigDecimal agencyCommission;
 
     public BigDecimal getApartmentRent() {

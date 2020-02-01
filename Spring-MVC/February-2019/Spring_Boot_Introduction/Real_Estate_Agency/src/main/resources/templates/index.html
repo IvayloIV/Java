@@ -1,23 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Real Estate Agency</title>
-    <link type="text/css" rel="stylesheet" href="/style/styles.css">
+    <link type="text/css" rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 <section>
     <div id="roof">
     </div>
     <div id="building"></div>
-        <p th:if="${offers.size() == 0}">There aren't any offers!</p>
-        <th:block th:each="offer : ${offers}">
-            <div class="apartment">
-                <p>Rent: <span th:text="${offer.apartmentRent}"></span></p>
-                <p>Type: <span th:text="${offer.apartmentType}"></span></p>
-                <p>Commission: <span th:text="${offer.agencyCommission}"></span></p>
-            </div>
-        </th:block>
+    {{offers}}
     <div id="offerManager">
         <div id="regOffer">
             <a href="/register" class="button">Reg Offer</a>
