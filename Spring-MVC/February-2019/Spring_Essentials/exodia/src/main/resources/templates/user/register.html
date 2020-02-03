@@ -1,8 +1,8 @@
-<th:block th:fragment="register" xmlns:th="http://www.w3.org/1999/xhtml">
+<th:block xmlns:th="http://www.thymeleaf.org" th:fragment="register">
     <hr class="bg-exodia hr-2"/>
     <h1 class="text-center text-exodia">Register</h1>
     <hr class="bg-exodia w-25 hr-2"/>
-    <form class="mx-auto w-25" th:method="POST" th:action="@{/register}">
+    <form class="mx-auto w-25" th:action="@{/user/register}" th:method="POST">
         <div class="form-group">
             <label for="username" class="text-exodia">Username</label>
             <input type="text" class="form-control" id="username" placeholder="Username..." name="username">

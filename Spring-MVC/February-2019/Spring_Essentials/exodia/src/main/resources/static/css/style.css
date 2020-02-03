@@ -13,15 +13,3 @@
 textarea {
     resize: none;
 }
-
-.exodia-block {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.exodia-element {
-    width: 16%;
-    margin: 1rem 1rem;
-}
