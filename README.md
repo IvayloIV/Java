@@ -105,3 +105,4 @@
 |--|:--:|
 |01. Spring Boot Introduction|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Spring_Boot_Introduction)|
 |02. Spring Essentials|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Spring_Essentials)|
+|03. Unit Testing and Isolation|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Unit_Testing_and_Isolation)|
