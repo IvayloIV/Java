@@ -107,3 +107,4 @@
 |02. Spring Essentials|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Spring_Essentials)|
 |03. Unit Testing and Isolation|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Unit_Testing_and_Isolation)|
 |04. Thymeleaf and Controllers|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Thymeleaf_and_Controllers)|
+|05. JS and AJAX|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/JS_and_AJAX)|
