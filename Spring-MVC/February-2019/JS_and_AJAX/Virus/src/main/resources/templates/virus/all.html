@@ -1,0 +1,19 @@
+<th:block xmlns:th="http://www.thymeleaf.org" th:fragment="index">
+    <div class="w-75 p-3 mt-3 mx-auto">
+        <div class="row sm-flex-center justify-content-between">
+            <div class="col-sm-6">
+                <h2>Your Choice</h2>
+            </div>
+            <div>
+                <input type="radio" id="type-viruses" name="showType">
+                <label for="type-viruses">Viruses</label>
+                <input type="radio" id="type-capitals" name="showType">
+                <label for="type-capitals">Capitals</label>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="w-75 p-3 mt-3 mx-auto" id="table-content">
+        <h2 class="text-center">Select, what data you want to visualize!</h2>
+    </div>
+</th:block>

@@ -1,0 +1,6 @@
+<th:block xmlns:th="http://www.thymeleaf.org" th:fragment="index">
+    <div th:replace="fragments/virusForm.html ::
+                virusForm(title='Spread a new Virus!',
+                          action='/virus/add',
+                          textButton='Submit')"></div>
+</th:block>
