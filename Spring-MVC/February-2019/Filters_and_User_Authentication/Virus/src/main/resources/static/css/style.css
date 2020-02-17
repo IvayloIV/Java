@@ -1,0 +1,12 @@
+.purple {
+    background-color: #900C45 !important;
+}
+
+.btn-none {
+    border: none;
+    outline: none;
+}
+
+.btn-none:focus {
+    outline: none;
+}

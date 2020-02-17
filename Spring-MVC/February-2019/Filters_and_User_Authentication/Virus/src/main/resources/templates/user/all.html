@@ -1,0 +1,36 @@
+<th:block xmlns:th="http://www.thymeleaf.org" th:fragment="index">
+    <div class="text-white purple mt-3 p-5 rounded-left">
+        <h2>Users</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col" class="text-light">#</th>
+                <th scope="col" class="text-light">Username</th>
+                <th scope="col" class="text-light">Roles</th>
+                <th scope="col" class="text-light">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user, iter : ${users}">
+                <th scope="row" class="text-light" th:text="${iter.index + 1}"></th>
+                <td class="text-light" th:text="*{user.username}"></td>
+                <td class="text-light" th:text="${user}"></td>
+                <td class="text-light" th:if="${!(#authentication.principal.username eq user.username) && !(#lists.contains(user.roles, rootRole))}">
+                    <th:block th:each="userRole : ${roles}" th:if="${userRole.authority != 'ROOT'}">
+                        <th:block th:if="${#lists.contains(user.roles, userRole)}">
+                            <a th:href="@{/user/authorize/{userId}/role/{roleId}(userId=${user.id}, roleId=${userRole.id})}">
+                                <button class="btn-danger ml-2 rounded" th:text="${userRole.authority}"></button>
+                            </a>
+                        </th:block>
+                        <th:block th:if="${!#lists.contains(user.roles, userRole)}">
+                            <a th:href="@{/user/authorize/{userId}/role/{roleId}(userId=${user.id}, roleId=${userRole.id})}">
+                                <button class="btn-secondary ml-2 rounded" th:text="${userRole.authority}"></button>
+                            </a>
+                        </th:block>
+                    </th:block>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</th:block>
