@@ -109,3 +109,4 @@
 |04. Thymeleaf and Controllers|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Thymeleaf_and_Controllers)|
 |05. JS and AJAX|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/JS_and_AJAX)|
 |06. Filters and User Authentication|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Filters_and_User_Authentication)|
+|07. Integration Testing|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Integration_Testing)|
