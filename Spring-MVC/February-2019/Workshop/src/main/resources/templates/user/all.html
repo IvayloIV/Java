@@ -1,0 +1,38 @@
+<th:block xmlns:th="http://www.thymeleaf.org" th:fragment="all">
+    <h1 class="text-center text-dark">All Users</h1>
+    <hr class="hr-2 bg-dark w-75">
+    <table class="table table-hover w-75 mx-auto">
+        <thead>
+        <tr class="row mx-auto">
+            <th class="col-md-2 text-center">#</th>
+            <th class="col-md-3 text-center">Username</th>
+            <th class="col-md-2 text-center">Email</th>
+            <th class="col-md-2 text-center">Roles</th>
+            <th class="col-md-3 text-center">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="row mx-auto" th:each="user, iter: ${users}" th:object="${user}">
+            <th class="col-md-2 text-center" th:text="${iter.index + 1}"></th>
+            <td class="col-md-3 text-center" th:text="*{username}"></td>
+            <td class="col-md-2 text-center" th:text="*{email}"></td>
+            <td class="col-md-2 text-center" th:text="${#strings.listJoin(user.roles, ', ')}"></td>
+            <td class="col-md-3 text-center">
+                <div class="row">
+                    <th:block th:if="${!(#authentication.principal.username eq user.username) &&
+                                        !(#lists.contains(user.roles, rootRole))}">
+                        <form th:action="@{/user/{userId}/role/{roleId}(userId=${user.id}, roleId=${role.id})}"
+                              th:method="POST"
+                              th:each="role: ${roles}"
+                              th:if="${!#lists.contains(user.roles, role)}"
+                              class="mx-1">
+                            <button class="btn btn-dark" th:text="${role.authority}"></button>
+                        </form>
+                    </th:block>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <hr class="hr-2 bg-dark">
+</th:block>
