@@ -1,4 +1,4 @@
-package com.producthop.softuni.domain.models.views;
+package com.producthop.softuni.domain.models.views.user;
 
 import java.util.Objects;
 

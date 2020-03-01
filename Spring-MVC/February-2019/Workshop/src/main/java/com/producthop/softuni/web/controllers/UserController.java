@@ -1,12 +1,11 @@
 package com.producthop.softuni.web.controllers;
 
-import com.producthop.softuni.domain.models.bindings.RegisterUserBindingModel;
-import com.producthop.softuni.domain.models.bindings.UserEditBindingModel;
-import com.producthop.softuni.domain.models.services.RoleServiceModel;
+import com.producthop.softuni.domain.models.bindings.user.RegisterUserBindingModel;
+import com.producthop.softuni.domain.models.bindings.user.UserEditBindingModel;
 import com.producthop.softuni.domain.models.services.UserServiceModel;
-import com.producthop.softuni.domain.models.views.RoleUserViewModel;
-import com.producthop.softuni.domain.models.views.UserDetailsViewModel;
-import com.producthop.softuni.domain.models.views.UserProfileViewModel;
+import com.producthop.softuni.domain.models.views.user.RoleUserViewModel;
+import com.producthop.softuni.domain.models.views.user.UserDetailsViewModel;
+import com.producthop.softuni.domain.models.views.user.UserProfileViewModel;
 import com.producthop.softuni.service.RoleService;
 import com.producthop.softuni.service.UserService;
 import org.modelmapper.ModelMapper;

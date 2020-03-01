@@ -1,8 +1,10 @@
-package com.producthop.softuni.domain.models.bindings;
+package com.producthop.softuni.domain.models.bindings.user;
 
-public class RegisterUserBindingModel {
+public class UserEditBindingModel {
 
     private String username;
+
+    private String oldPassword;
 
     private String password;
 
@@ -16,6 +18,14 @@ public class RegisterUserBindingModel {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getOldPassword() {
+        return oldPassword;
+    }
+
+    public void setOldPassword(String oldPassword) {
+        this.oldPassword = oldPassword;
     }
 
     public String getPassword() {

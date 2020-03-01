@@ -1,4 +1,4 @@
-package com.producthop.softuni.domain.models.bindings;
+package com.producthop.softuni.domain.models.bindings.user;
 
 public class LoginUserBindingModel {
 

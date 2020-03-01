@@ -1,10 +1,11 @@
-package com.producthop.softuni.service;
+package com.producthop.softuni.service.impl;
 
-import com.producthop.softuni.domain.entities.Role;
 import com.producthop.softuni.domain.entities.User;
 import com.producthop.softuni.domain.models.services.RoleServiceModel;
 import com.producthop.softuni.domain.models.services.UserServiceModel;
 import com.producthop.softuni.repository.UserRepository;
+import com.producthop.softuni.service.RoleService;
+import com.producthop.softuni.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,0 +1,26 @@
+<th:block xmlns:th="http://www.thymeleaf.org" th:fragment="categories">
+    <h1 class="text-center text-dark">All Categories</h1>
+    <hr class="hr-2 bg-dark w-75">
+    <table class="table table-hover w-75 mx-auto">
+        <thead>
+        <tr class="row mx-auto">
+            <th class="col-md-2 text-center">#</th>
+            <th class="col-md-5 text-center">Name</th>
+            <th class="col-md-5 text-center">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr class="row mx-auto" th:each="category, iter: ${categories}" th:object="${category}">
+            <th class="col-md-2 text-center" th:text="${iter.index + 1}"></th>
+            <td class="col-md-5 text-center" th:text="*{name}"></td>
+            <td class="col-md-5 text-center">
+                <a th:href="@{/category/edit/{id}(id=*{id})}" class="btn btn-dark">Edit</a>
+                <a th:href="@{/category/delete/{id}(id=*{id})}" class="btn btn-dark">Delete</a>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+    <hr class="hr-2 bg-dark">
+</th:block>
