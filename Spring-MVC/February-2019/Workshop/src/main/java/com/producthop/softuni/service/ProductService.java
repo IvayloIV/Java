@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface ProductService {
 
-    public boolean save(ProductServiceModel productServiceModel);
+    public ProductServiceModel save(ProductServiceModel productServiceModel);
 
-    public boolean save(ProductServiceModel productServiceModel, List<String> categoriesId);
+    public ProductServiceModel save(ProductServiceModel productServiceModel, List<String> categoriesId);
 
     public List<ProductServiceModel> getAll();
 

@@ -2,7 +2,6 @@ package com.producthop.softuni.web.controllers;
 
 import com.producthop.softuni.domain.models.bindings.product.ProductCreateBindingModel;
 import com.producthop.softuni.domain.models.bindings.product.ProductEditBindingModel;
-import com.producthop.softuni.domain.models.services.CategoryServiceModel;
 import com.producthop.softuni.domain.models.services.ProductServiceModel;
 import com.producthop.softuni.domain.models.views.category.CategoryAllViewModel;
 import com.producthop.softuni.domain.models.views.category.CategoryDetailsViewModel;
@@ -10,15 +9,17 @@ import com.producthop.softuni.domain.models.views.product.ProductAllViewModel;
 import com.producthop.softuni.domain.models.views.product.ProductDetailsViewModel;
 import com.producthop.softuni.domain.models.views.product.ProductEditViewModel;
 import com.producthop.softuni.service.CategoryService;
+import com.producthop.softuni.service.CloudinaryService;
 import com.producthop.softuni.service.ProductService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.io.IOException;
 import java.util.List;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Controller
@@ -28,12 +29,14 @@ public class ProductController extends BaseController {
     private final ModelMapper modelMapper;
     private final ProductService productService;
     private final CategoryService categoryService;
+    private final CloudinaryService cloudinaryService;
 
     @Autowired
-    public ProductController(ModelMapper modelMapper, ProductService productService, CategoryService categoryService) {
+    public ProductController(ModelMapper modelMapper, ProductService productService, CategoryService categoryService, CloudinaryService cloudinaryService) {
         this.modelMapper = modelMapper;
         this.productService = productService;
         this.categoryService = categoryService;
+        this.cloudinaryService = cloudinaryService;
     }
 
     @GetMapping("/home")
@@ -64,12 +67,13 @@ public class ProductController extends BaseController {
     }
 
     @PostMapping("/create")
-    public ModelAndView createConfirm(@ModelAttribute ProductCreateBindingModel model) {
+    public ModelAndView createConfirm(@ModelAttribute ProductCreateBindingModel model) throws IOException {
         ProductServiceModel productServiceModel = this.modelMapper.map(model, ProductServiceModel.class);
+        productServiceModel.setImageUrl(this.cloudinaryService.uploadImage(model.getImage()));
         List<String> categoriesId = model.getCategoriesId();
 
-        boolean isSaved = this.productService.save(productServiceModel, categoriesId);
-        if (!isSaved) {
+        ProductServiceModel savedProduct = this.productService.save(productServiceModel, categoriesId);
+        if (savedProduct == null) {
             return super.redirect("/product/create");
         }
         return super.redirect("/product/all");
@@ -110,11 +114,11 @@ public class ProductController extends BaseController {
         List<String> categoriesId = model.getCategoriesId();
         productServiceModel.setId(productId);
 
-        boolean isEdited = this.productService.save(productServiceModel, categoriesId);
-        if (!isEdited) {
+        ProductServiceModel editProduct = this.productService.save(productServiceModel, categoriesId);
+        if (editProduct == null) {
             return super.redirect("/product/edit/" + productId);
         }
-        return super.redirect("/product/all");
+        return super.redirect("/product/details/" + editProduct.getId());
     }
 
     @GetMapping("/delete/{productId}")

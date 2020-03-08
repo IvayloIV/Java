@@ -1,5 +1,7 @@
 package com.producthop.softuni.domain.models.bindings.product;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -11,7 +13,7 @@ public class ProductCreateBindingModel {
 
     private BigDecimal price;
 
-    private String imageUrl;
+    private MultipartFile image;
 
     private List<String> categoriesId;
 
@@ -39,12 +41,12 @@ public class ProductCreateBindingModel {
         this.price = price;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public MultipartFile getImage() {
+        return image;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImage(MultipartFile image) {
+        this.image = image;
     }
 
     public List<String> getCategoriesId() {

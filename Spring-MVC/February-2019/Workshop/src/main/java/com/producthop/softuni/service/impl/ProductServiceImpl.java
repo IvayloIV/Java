@@ -28,18 +28,17 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public boolean save(ProductServiceModel productServiceModel) {
+    public ProductServiceModel save(ProductServiceModel productServiceModel) {
         try {
             Product product = this.modelMapper.map(productServiceModel, Product.class);
-            this.productRepository.save(product);
-            return true;
+            return this.modelMapper.map(this.productRepository.save(product), ProductServiceModel.class);
         } catch (Exception err) {
-            return false;
+            return null;
         }
     }
 
     @Override
-    public boolean save(ProductServiceModel productServiceModel, List<String> categoriesId) {
+    public ProductServiceModel save(ProductServiceModel productServiceModel, List<String> categoriesId) {
         this.convertCategories(categoriesId, productServiceModel);
         return this.save(productServiceModel);
     }
