@@ -13,6 +13,8 @@ public class UserServiceModel extends BaseServiceModel {
 
     private List<RoleServiceModel> roles;
 
+    private List<OrderServiceModel> orders;
+
     public UserServiceModel() {
         this.roles = new ArrayList<>();
     }
@@ -47,5 +49,13 @@ public class UserServiceModel extends BaseServiceModel {
 
     public void setRoles(List<RoleServiceModel> roles) {
         this.roles = roles;
+    }
+
+    public List<OrderServiceModel> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<OrderServiceModel> orders) {
+        this.orders = orders;
     }
 }

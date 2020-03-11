@@ -1,0 +1,37 @@
+<th:block xmlns:th="http://www.thymeleaf.org" th:fragment="order-details">
+    <div class="jumbotron bg-light" th:object="${order}">
+        <div class="text-center">
+            <img th:src="*{productImageUrl}" width="200" height="200" alt="Product">
+        </div>
+        <div class="row">
+            <div class="col col-md-12 text-center mt-5">
+                <h1 th:text="|Name: *{productName}|"></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-12 text-center mt-3">
+                <h4 th:text="|Desciption: *{productDescription}|"></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-12 text-center mt-3">
+                <h4 th:text="|Customer: *{userUsername}|"></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-12 text-center">
+                <h4 th:text="|Quantity: *{quantity}|"></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-12 text-center">
+                <h4 th:text="|Price: *{productPrice}|"></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-12 text-center">
+                <h4 th:text="|Date: *{{orderDate}}|"></h4>
+            </div>
+        </div>
+    </div>
+</th:block>

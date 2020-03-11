@@ -1,0 +1,31 @@
+<th:block xmlns:th="http://www.thymeleaf.org" th:fragment="order-list">
+    <h1 class="text-center text-dark" th:text="${title}"></h1>
+    <hr class="hr-2 bg-dark w-75">
+    <table class="table table-hover w-75 mx-auto">
+        <thead>
+        <tr class="row mx-auto">
+            <th class="col-md-1 text-center">#</th>
+            <th class="col-md-3 text-center">Image</th>
+            <th class="col-md-3 text-center">Customer</th>
+            <th class="col-md-2 text-center">Price</th>
+            <th class="col-md-3 text-center">Date</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr class="row mx-auto" th:each="order, iter: ${orders}" th:object="${order}">
+            <th class="col-md-1 text-center" th:text="${iter.index + 1}"></th>
+            <td class="col-md-3">
+                <div class="text-center">
+                    <a th:href="@{/order/details/{id}(id=*{id})}">
+                <img th:src="*{productImageUrl}" width="40" height="40" alt="Product">
+            </a></div></td>
+            <td class="col-md-3 text-center" th:text="*{userUsername}"></td>
+            <td class="col-md-2 text-center" th:text="*{productPrice}"></td>
+            <td class="col-md-3 text-center" th:text="*{{orderDate}}"></td>
+        </tr>
+
+        </tbody>
+    </table>
+    <hr class="hr-2 bg-dark">
+</th:block>

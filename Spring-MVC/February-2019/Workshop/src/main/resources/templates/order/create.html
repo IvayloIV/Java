@@ -1,0 +1,32 @@
+<th:block xmlns:th="http://www.thymeleaf.org" th:fragment="order-create">
+    <div class="jumbotron bg-light" th:object="${order}">
+        <form id="add-product-form" class="form w-25 mx-auto" th:action="@{/order/create/product/{id}(id=*{id})}" th:method="POST">
+            <div class="text-center">
+                <img th:src="*{imageUrl}" width="350" height="350" alt="Product">
+            </div>
+            <div class="form-group">
+                <label for="add-order-customer" class="font-weight-bold">Customer</label>
+                <input type="text" class="form-control text-center" id="add-order-customer" name="customer" th:value="*{username}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="add-order-name" class="font-weight-bold">Name</label>
+                <input type="text" class="form-control text-center" id="add-order-name" name="category" th:value="*{name}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="add-order-description" class="font-weight-bold">Description</label>
+                <textarea name="description" id="add-order-description" cols="41" rows="5" th:text="*{description}" readonly></textarea>
+            </div>
+            <div class="form-group">
+                <label for="add-order-price" class="font-weight-bold">Price</label>
+                <input type="number" step="any" class="form-control text-center" id="add-order-price" name="price" th:value="*{price}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="add-order-quantity" class="font-weight-bold">Quantity</label>
+                <input type="number" step="any" class="form-control text-center" id="add-order-quantity" name="quantity">
+            </div>
+            <div class="button-holder d-flex justify-content-center">
+                <button type="submit" class="btn btn-success">Order Product</button>
+            </div>
+        </form>
+    </div>
+</th:block>

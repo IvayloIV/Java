@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface UserService extends UserDetailsService {
 
+    public UserServiceModel getByUsername(String username);
+
     public boolean registerUser(UserServiceModel userServiceModel);
 
     public UserServiceModel profileUser(String username);

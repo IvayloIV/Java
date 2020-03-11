@@ -26,6 +26,9 @@ public class User extends BaseEntity implements UserDetails {
         inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
     private List<Role> roles;
 
+    @OneToMany(targetEntity = Order.class, mappedBy = "user")
+    private List<Order> orders;
+
     public String getUsername() {
         return username;
     }
@@ -56,6 +59,14 @@ public class User extends BaseEntity implements UserDetails {
 
     public void setRoles(List<Role> roles) {
         this.roles = roles;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 
     @Override

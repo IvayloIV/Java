@@ -13,6 +13,9 @@
                 <li class="nav-item active" sec:authorize="isAuthenticated()">
                     <a class="nav-link" th:href="@{/product/home}">Home</a>
                 </li>
+                <li class="nav-item active" sec:authorize="isAuthenticated()">
+                    <a class="nav-link" th:href="@{/order/my}">My Orders</a>
+                </li>
                 <li class="nav-item active" sec:authorize="isAnonymous()">
                     <a class="nav-link" th:href="@{/user/login}">Login</a>
                 </li>
@@ -34,6 +37,7 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" th:href="@{/category/all}">All Categories</a>
                             <a class="dropdown-item" th:href="@{/product/all}">All Products</a>
+                            <a class="dropdown-item" th:href="@{/order/all}">All Orders</a>
                         </div>
                     </div>
                 </li>

@@ -14,6 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -33,6 +34,17 @@ public class UserServiceImpl implements UserService {
         this.userRepository = userRepository;
         this.roleService = roleService;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
+
+    @Override
+    public UserServiceModel getByUsername(String username) {
+        try {
+            User user = this.userRepository.findByUsername(username)
+                    .orElseThrow(() -> new IllegalArgumentException("Username does not exist."));
+            return this.modelMapper.map(user, UserServiceModel.class);
+        } catch (Exception err) {
+            return null;
+        }
     }
 
     @Override

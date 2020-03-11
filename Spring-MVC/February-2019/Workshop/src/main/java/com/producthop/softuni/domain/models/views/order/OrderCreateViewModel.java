@@ -1,12 +1,14 @@
-package com.producthop.softuni.domain.models.views.product;
+package com.producthop.softuni.domain.models.views.order;
 
 import java.math.BigDecimal;
 
-public class ProductDetailsViewModel {
+public class OrderCreateViewModel {
 
     private String id;
 
     private String name;
+
+    private String username;
 
     private String description;
 
@@ -28,6 +30,14 @@ public class ProductDetailsViewModel {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getDescription() {

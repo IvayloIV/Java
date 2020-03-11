@@ -21,9 +21,10 @@ public class ApplicationSecurityConfiguration extends WebSecurityConfigurerAdapt
             .and()
                 .authorizeRequests()
                 .antMatchers("/", "/user/login", "/user/register").anonymous()
-                .antMatchers("/user/profile", "/product/home", "/logout", "/product/api/category/*", "/product/details/*").hasAnyAuthority("USER", "MODERATOR", "ADMIN", "ROOT")
+                .antMatchers("/user/profile", "/product/home", "/logout", "/product/api/category/*", "/product/details/*", "/order/create/product/*",
+                                        "/order/my", "/order/detail/*").hasAnyAuthority("USER", "MODERATOR", "ADMIN", "ROOT")
                 .antMatchers("/category/all", "/category/create", "/category/edit/*", "/category/delete/*",
-                                        "/product/create", "/product/all", "/product/edit/*", "/product/delete/*").hasAnyAuthority("MODERATOR", "ADMIN", "ROOT")
+                                        "/product/create", "/product/all", "/product/edit/*", "/product/delete/*", "order/all").hasAnyAuthority("MODERATOR", "ADMIN", "ROOT")
                 .antMatchers("/user/all", "/user/*/role/*").hasAnyAuthority("ADMIN", "ROOT")
                 .antMatchers("/js/**", "/css/**").permitAll()
                 .anyRequest().authenticated()
