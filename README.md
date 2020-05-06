@@ -98,6 +98,7 @@
 |Judge|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Judge)||
 |Mish Mash|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Mish_Mash/jsf)|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Mish_Mash/jsp)|
 |Torshia|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Torshia/jsf)|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Torshia/jsp)|
+|Heroes|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Web-Basics/Exams/Heroes/jsf)||
 
 ## Spring MVC
 
