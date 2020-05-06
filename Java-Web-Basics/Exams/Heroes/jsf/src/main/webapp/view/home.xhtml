@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <div class="text-center mb-3">
+            <h4 class="text-white mt-2">Welcome to the arena,
+                <h:outputText value="#{session.getAttribute('username')}"/></h4>
+        </div>
+        <hr class="my-3"/>
+        <div class="container">
+            <div class="row mb-4 d-flex justify-content-around">
+                <c:forEach items="#{allHeroBean.heroes}" var="hero">
+                    <div class="col-md-4 d-flex flex-column text-center mb-3 px-5 py-1">
+                        <h:graphicImage library="heroes-app-lib" name="/img/#{hero.heroClass.toLowerCase()}.jpg" styleClass="img-thumb" width="300" height="300"/>
+                        <h5 class="text-white text-center">
+                            <h:outputText value="#{hero.name}"/>
+                        </h5>
+                        <h:link outcome="heroDetails" value="Details" styleClass="btn btn-info mb-2">
+                            <f:param name="heroId" value="#{hero.id}"/>
+                        </h:link>
+                        <h:link outcome="deleteHero" value="Delete" styleClass="btn btn-danger">
+                            <f:param name="heroId" value="#{hero.id}"/>
+                        </h:link>
+                    </div>
+                </c:forEach>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
+
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <ui:decorate template="head.xhtml"/>
+</h:head>
+
+<h:body>
+    <header>
+        <ui:decorate template="header.xhtml"/>
+    </header>
+    <main>
+        <ui:insert name="main-context"/>
+    </main>
+    <footer class="footer bg-dark  py-2">
+        <ui:decorate template="footer.xhtml"/>
+    </footer>
+</h:body>
+
+</html>

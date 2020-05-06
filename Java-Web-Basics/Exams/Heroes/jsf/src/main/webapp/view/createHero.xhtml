@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <h1 class="text-center mt-2">Create Hero</h1>
+        <hr class="hr-3"/>
+        <h:form styleClass="mx-auto w-15">
+            <div class="form-group">
+                <div class="text-white label-holder d-flex justify-content-center">
+                    <h:outputLabel for="heroName" value="Hero Name" styleClass="h4 mb-2"/>
+                </div>
+                <h:inputText value="#{createHeroBean.heroBindingModel.name}"
+                             id="heroName"
+                             styleClass="form-control"/>
+            </div>
+            <div class="form-group">
+                <div class="text-white label-holder d-flex justify-content-center">
+                    <label for="heroClass" class="h4 mb-2">Hero Class</label>
+                </div>
+                <p:selectOneMenu id="heroClass" styleClass="margin-left: 30%; width: 100px;" value="#{createHeroBean.heroBindingModel.heroClass}">
+                    <f:selectItems value="#{createHeroBean.heroesClass}" />
+                </p:selectOneMenu>
+            </div>
+            <div class="form-group">
+                <div class="text-white label-holder d-flex justify-content-center">
+                    <h:outputLabel for="level" value="Level" styleClass="h4 mb-2"/>
+                </div>
+                <p:inputNumber value="#{createHeroBean.heroBindingModel.level}"
+                             id="level"
+                             styleClass="form-control"/>
+            </div>
+            <div class="button-holder d-flex justify-content-center">
+                <h:commandButton action="#{createHeroBean.create}"
+                                 value="Create Hero"
+                                 styleClass="btn btn-info text-white mb-3"/>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+</html>

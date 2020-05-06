@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <h1 class="text-center">Login</h1>
+        <hr class="hr-3"/>
+        <h:form styleClass="mx-auto w-15">
+            <div class="form-group">
+                <div class="label-holder text-white d-flex justify-content-center">
+                    <h:outputLabel for="username" value="Username" styleClass="h3 mb-2"/>
+                </div>
+                <h:inputText value="#{loginUserBean.loginUserBindingModel.username}"
+                              id="username"
+                              styleClass="form-control"/>
+            </div>
+            <div class="form-group">
+                <div class="label-holder text-white d-flex justify-content-center">
+                    <h:outputLabel for="password" value="Password" styleClass="h3 mb-2"/>
+                </div>
+                <p:password value="#{loginUserBean.loginUserBindingModel.password}"
+                              id="password"
+                              styleClass="form-control"/>
+            </div>
+            <div class="button-holder d-flex justify-content-center">
+                <h:commandButton action="#{loginUserBean.login}"
+                                 value="Login"
+                                 styleClass="btn btn-info text-white mb-3"/>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+</html>

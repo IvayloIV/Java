@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="templates/base-layout.xhtml">
+    <ui:define name="main-context">
+        <h1 class="text-center mt-2">Delete Hero</h1>
+        <hr class="hr-3"/>
+        <h:form styleClass="mx-auto w-15">
+            <div class="form-group">
+                <div class="label-holder d-flex justify-content-center text-white">
+                    <h:outputLabel value="Name" for="name" styleClass="h3 mb-2"/>
+                </div>
+                <h:outputText value="#{deleteHeroBean.heroDetail.name}"
+                              id="name"
+                              styleClass="form-control"
+                              disabled="true"/>
+            </div>
+            <div class="form-group">
+                <div class="label-holder d-flex justify-content-center text-white">
+                    <h:outputLabel value="Hero class" for="heroClass" styleClass="h3 mb-2"/>
+                </div>
+                <h:outputText value="#{deleteHeroBean.heroDetail.heroClass}"
+                              id="heroClass"
+                              styleClass="form-control"
+                              disabled="true"/>
+            </div>
+            <div class="form-group">
+                <div class="label-holder d-flex justify-content-center text-white">
+                    <h:outputLabel value="Level" for="level" styleClass="h3 mb-2"/>
+                </div>
+                <p:inputNumber value="#{deleteHeroBean.heroDetail.level}"
+                              id="level"
+                              styleClass="form-control"
+                              disabled="true"/>
+            </div>
+            <div class="button-holder d-flex justify-content-center">
+                <h:commandButton action="#{deleteHeroBean.remove}"
+                                 value="Delete Hero"
+                                 styleClass="btn btn-danger text-white mb-3">
+                    <f:param name="heroId" value="#{deleteHeroBean.heroDetail.id}"/>
+                </h:commandButton>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+</html>
