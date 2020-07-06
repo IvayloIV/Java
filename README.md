@@ -18,6 +18,7 @@
 |--|:--:|
 |24.02.2019|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Exams/24.02.2019)|
 |23.06.2019|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Exams/23.06.2019)|
+|22.02.2020|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-Advanced/Exams/22.02.2020)|
 
 ## Java - OOP
 
