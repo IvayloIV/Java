@@ -38,6 +38,7 @@
 |Exam Date||
 |--|:--:|
 |18.04.2019|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-OOP/Exams/18.04.2019)|
+|19.12.2019|[Exam](https://github.com/IvayloIV/Java/tree/master/Java-OOP/Exams/19.12.2019)|
 
 ## MySQL
 
