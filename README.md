@@ -59,6 +59,7 @@
 |25.02.2018|[Exam](https://github.com/IvayloIV/Java/tree/master/MySQL/Exams/25.02.2018)|
 |03.09.2017|[Exam](https://github.com/IvayloIV/Java/tree/master/MySQL/Exams/03.09.2017)|
 |15.12.2016|[Exam](https://github.com/IvayloIV/Java/tree/master/MySQL/Exams/15.12.2016)|
+|09.02.2020|[Exam](https://github.com/IvayloIV/Java/tree/master/MySQL/Exams/09.02.2020)|
 
 ## Hibernate
 
