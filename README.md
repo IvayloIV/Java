@@ -115,3 +115,9 @@
 |06. Filters and User Authentication|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Filters_and_User_Authentication)|
 |07. Integration Testing|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Integration_Testing)|
 |08. Workshop|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-MVC/February-2019/Workshop)|
+
+## Spring Fundamentals
+
+|Theme|Exercise|
+|--|:--:|
+|01. Spring Boot Introduction|[Exercise](https://github.com/IvayloIV/Java/tree/master/Spring-Fundamentals/January-2021/Spring_Boot_Introduction)|
